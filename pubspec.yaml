@@ -1,0 +1,32 @@
+name: majorproject
+description: A fun AI learning app for kids (NGO project)
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI / State
+  cupertino_icons: ^1.0.8
+
+  # Local storage for progress tracking
+  shared_preferences: ^2.3.2
+
+  # Audio player for interactive lessons
+  audioplayers: ^5.1.0  # Use the latest stable version
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/
+

@@ -1,0 +1,24 @@
+{
+  "id": 1,
+  "title": "Riya and Her Smart Robot",
+  "story": [
+    "Riya had a toy robot that could talk.",
+    "At first, the robot only knew how to say 'Hello.'",
+    "Riya taught it new words every day, like 'Good morning' and 'Thank you.'",
+    "One day, the robot surprised Riya by answering her question all by itself!",
+    "Her teacher smiled and said, 'This is called Artificial Intelligence. It means machines can learn just like us.'"
+  ],
+  "quiz": [
+    {
+      "question": "Who taught the robot new words?",
+      "options": ["Riya", "Teacher", "Robot itself"],
+      "answer": "Riya"
+    },
+    {
+      "question": "What do we call a machine that can learn?",
+      "options": ["Car", "Book", "AI"],
+      "answer": "AI"
+    }
+  ],
+  "lesson_takeaway": "AI is when machines can learn from us and get smarter."
+}
