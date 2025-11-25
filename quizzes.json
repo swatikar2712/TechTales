@@ -1,0 +1,267 @@
+{
+  "Introduction to AI": [
+    {
+      "id": "ai_q1",
+      "question": "What does AI stand for?",
+      "options": ["A) Automatic Internet", "B) Artificial Intelligence", "C) Active Input"],
+      "answer_index": 1,
+      "explanation": "AI means Artificial Intelligence — machines that can do tasks that need thinking."
+    },
+    {
+      "id": "ai_q2",
+      "question": "Which of these is an example of AI you might see at home?",
+      "options": ["A) A pencil", "B) A smart speaker (like Alexa)", "C) A wooden chair"],
+      "answer_index": 1,
+      "explanation": "Smart speakers use AI to understand voice commands and answer questions."
+    },
+    {
+      "id": "ai_q3",
+      "question": "If a computer learns from many pictures to tell cats from dogs, this is called:",
+      "options": ["A) Machine Learning", "B) Baking", "C) Floating"],
+      "answer_index": 0,
+      "explanation": "Teaching a computer with many examples is called Machine Learning."
+    },
+    {
+      "id": "ai_q4",
+      "question": "Which is NOT something AI can do today?",
+      "options": ["A) Recognize faces", "B) Fly without any hardware", "C) Suggest videos you may like"],
+      "answer_index": 1,
+      "explanation": "AI needs hardware — it cannot magically fly by itself."
+    },
+    {
+      "id": "ai_q5",
+      "question": "Why should we be careful when we use AI?",
+      "options": ["A) It always knows everything", "B) It might make mistakes if given bad data", "C) It replaces all humans instantly"],
+      "answer_index": 1,
+      "explanation": "AI can make wrong predictions if trained on bad or limited data."
+    }
+  ],
+
+  "Dream Smart Home": [
+    {
+      "id": "home_q1",
+      "question": "What could a 'smart home' do to help you wake up?",
+      "options": ["A) Turn on a gentle light and play music", "B) Turn off the sun", "C) Build a house overnight"],
+      "answer_index": 0,
+      "explanation": "A smart home can change lights or play sounds to wake you up gently."
+    },
+    {
+      "id": "home_q2",
+      "question": "Which sensors help a smart home know someone is in a room?",
+      "options": ["A) Motion sensors", "B) Cookie sensors", "C) Rocket sensors"],
+      "answer_index": 0,
+      "explanation": "Motion sensors detect movement and tell the system someone is present."
+    },
+    {
+      "id": "home_q3",
+      "question": "If a smart home learns your favourite temperature, it uses:",
+      "options": ["A) Memory and learning from your choices", "B) Magic", "C) A random number generator"],
+      "answer_index": 0,
+      "explanation": "It learns patterns from your past choices to set the temperature automatically."
+    },
+    {
+      "id": "home_q4",
+      "question": "Which is a good safety feature for a smart home?",
+      "options": ["A) Cameras that record everything and share publicly", "B) Locks that open for anyone", "C) Secure locks that need a code or face unlock"],
+      "answer_index": 2,
+      "explanation": "Security features should protect privacy and allow only trusted people in."
+    },
+    {
+      "id": "home_q5",
+      "question": "Why is it important to protect passwords in a smart home?",
+      "options": ["A) To keep strangers from controlling your home", "B) So the fridge works faster", "C) So lights blink randomly"],
+      "answer_index": 0,
+      "explanation": "Strong passwords stop outsiders from controlling devices and protect privacy."
+    }
+  ],
+
+  "AI Games": [
+    {
+      "id": "games_q1",
+      "question": "In Rock-Paper-Scissors, if we make the computer learn which move you pick often, that's using:",
+      "options": ["A) Data", "B) A bicycle", "C) A sandwich"],
+      "answer_index": 0,
+      "explanation": "The computer uses past data to guess your next move."
+    },
+    {
+      "id": "games_q2",
+      "question": "In a Mystery Animal game using NLP, the computer tries to:",
+      "options": ["A) Read words and find clues", "B) Cook food", "C) Paint a wall"],
+      "answer_index": 0,
+      "explanation": "NLP (language processing) helps the computer understand words and hints."
+    },
+    {
+      "id": "games_q3",
+      "question": "Emoji Scavenger Hunt using Computer Vision means the computer:",
+      "options": ["A) Looks at pictures to find matching emojis", "B) Sings a song", "C) Flies a kite"],
+      "answer_index": 0,
+      "explanation": "Computer vision can spot objects or faces in pictures, like emojis."
+    },
+    {
+      "id": "games_q4",
+      "question": "Why are games useful to learn AI?",
+      "options": ["A) They make learning fun and show how AI uses data", "B) They make you sleep", "C) They remove homework"],
+      "answer_index": 0,
+      "explanation": "Games make abstract ideas concrete and fun to practice."
+    },
+    {
+      "id": "games_q5",
+      "question": "If the game suggests choices based on what you did earlier, it is using:",
+      "options": ["A) Memory and patterns (data)", "B) A random wheel", "C) A calculator only"],
+      "answer_index": 0,
+      "explanation": "Using previous actions to suggest new ones is data-driven behaviour."
+    }
+  ],
+
+  "Smart Cities": [
+    {
+      "id": "city_q1",
+      "question": "What is one job of AI in a Smart City?",
+      "options": ["A) Helping traffic flow better", "B) Building houses by itself", "C) Making clouds"],
+      "answer_index": 0,
+      "explanation": "AI can manage traffic lights and plan routes to reduce jams."
+    },
+    {
+      "id": "city_q2",
+      "question": "Which sensor might a smart city use to check air quality?",
+      "options": ["A) Air sensors", "B) Pencil sensors", "C) Spoon sensors"],
+      "answer_index": 0,
+      "explanation": "Air sensors measure pollution and help the city take action."
+    },
+    {
+      "id": "city_q3",
+      "question": "How can AI help in emergencies in a city?",
+      "options": ["A) Alert the right people and send help faster", "B) Fly everyone home", "C) Turn off all phones"],
+      "answer_index": 0,
+      "explanation": "AI helps detect incidents and route help efficiently."
+    },
+    {
+      "id": "city_q4",
+      "question": "Why is keeping data private important in a city?",
+      "options": ["A) To protect people's personal information", "B) So the city can sell secrets", "C) To stop all traffic lights"],
+      "answer_index": 0,
+      "explanation": "Privacy protects people from misuse of their data."
+    },
+    {
+      "id": "city_q5",
+      "question": "Which helps a smart city use energy better?",
+      "options": ["A) Smart meters and AI that predict usage", "B) A bigger watch", "C) Singing loudly"],
+      "answer_index": 0,
+      "explanation": "Smart meters + AI can reduce waste by predicting energy needs."
+    }
+  ],
+
+  "AI and SDGs": [
+    {
+      "id": "sdg_q1",
+      "question": "AI can help farmers by:",
+      "options": ["A) Telling when crops need water", "B) Drawing pictures", "C) Fixing cars"],
+      "answer_index": 0,
+      "explanation": "AI can analyse weather and soil to advise watering and increase yield."
+    },
+    {
+      "id": "sdg_q2",
+      "question": "Which Sustainable Development Goal can AI help with?",
+      "options": ["A) Zero Hunger", "B) Faster jokes", "C) Flying schools"],
+      "answer_index": 0,
+      "explanation": "AI can help improve agriculture and distribution to reduce hunger."
+    },
+    {
+      "id": "sdg_q3",
+      "question": "How can AI help protect animals?",
+      "options": ["A) Track animals and detect poaching", "B) Teach them to code", "C) Put collars on clouds"],
+      "answer_index": 0,
+      "explanation": "AI systems analyse camera/tracking data to spot threats to wildlife."
+    },
+    {
+      "id": "sdg_q4",
+      "question": "Why should AI be fair when used for people?",
+      "options": ["A) So everyone gets equal help and opportunities", "B) So only one person wins", "C) So it becomes magic"],
+      "answer_index": 0,
+      "explanation": "Fair AI avoids discrimination and helps all people equally."
+    },
+    {
+      "id": "sdg_q5",
+      "question": "What is one way students can help with SDGs using AI?",
+      "options": ["A) Learn how data tells us about problems and propose ideas", "B) Sleep all day", "C) Ignore data"],
+      "answer_index": 0,
+      "explanation": "Understanding data lets students propose local solutions for sustainability."
+    }
+  ],
+
+  "AI Case Studies": [
+    {
+      "id": "case_q1",
+      "question": "What is a case study?",
+      "options": ["A) A detailed example of how something worked in real life", "B) A lunch box", "C) A random game"],
+      "answer_index": 0,
+      "explanation": "A case study shows a real example to learn from."
+    },
+    {
+      "id": "case_q2",
+      "question": "If a startup uses AI to help doctors, that is an example of:",
+      "options": ["A) AI in healthcare", "B) AI in baking", "C) AI in painting only"],
+      "answer_index": 0,
+      "explanation": "AI can assist in health tasks, like analysing images to spot illness early."
+    },
+    {
+      "id": "case_q3",
+      "question": "Why are stories of startups helpful for students?",
+      "options": ["A) They show how ideas become useful products", "B) They teach you to copy only", "C) They tell secret recipes"],
+      "answer_index": 0,
+      "explanation": "Startups show creativity and how technology solves problems."
+    },
+    {
+      "id": "case_q4",
+      "question": "When studying a case, one thing to look for is:",
+      "options": ["A) The problem they solved and how", "B) The color of their logo", "C) Their favorite food"],
+      "answer_index": 0,
+      "explanation": "Understanding the problem and the solution is the key learning."
+    },
+    {
+      "id": "case_q5",
+      "question": "What is a simple way to present a case study?",
+      "options": ["A) Problem → Idea → Result", "B) Random pictures", "C) Only animations"],
+      "answer_index": 0,
+      "explanation": "A clear structure helps others learn from the example."
+    }
+  ],
+
+  "AI Ethics and Bias": [
+    {
+      "id": "ethics_q1",
+      "question": "What does 'bias' mean for AI?",
+      "options": ["A) When AI treats some people unfairly", "B) When AI becomes invisible", "C) When AI eats data"],
+      "answer_index": 0,
+      "explanation": "Bias makes AI guess wrongly for certain people if training data was unfair."
+    },
+    {
+      "id": "ethics_q2",
+      "question": "Which is an ethical rule for using AI?",
+      "options": ["A) Respect privacy", "B) Share everyone's passwords", "C) Turn off all lights"],
+      "answer_index": 0,
+      "explanation": "Respecting privacy protects people from harm or misuse of data."
+    },
+    {
+      "id": "ethics_q3",
+      "question": "Why should kids learn about AI ethics?",
+      "options": ["A) So they know how to build kind and fair technology", "B) So they can break things", "C) So they can be lazy"],
+      "answer_index": 0,
+      "explanation": "Ethics helps future builders make safe technology for everyone."
+    },
+    {
+      "id": "ethics_q4",
+      "question": "If an AI hurts someone's feelings, what should creators do?",
+      "options": ["A) Fix the data and design it better", "B) Do nothing", "C) Remove the person"],
+      "answer_index": 0,
+      "explanation": "Creators should correct mistakes and improve how AI behaves."
+    },
+    {
+      "id": "ethics_q5",
+      "question": "Which practice helps reduce bias?",
+      "options": ["A) Use diverse examples when training AI", "B) Only use one kind of example", "C) Ignore testing"],
+      "answer_index": 0,
+      "explanation": "Diverse training data helps AI treat more people fairly."
+    }
+  ]
+}
