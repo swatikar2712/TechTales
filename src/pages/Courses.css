@@ -1,0 +1,73 @@
+/* ═══════════════════════════════════════════
+   Courses Page
+   ═══════════════════════════════════════════ */
+
+.courses-page {
+  text-align: left;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.course-block {
+  background: #fafbff;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.course-block-title {
+  font-size: 1.2rem;
+  color: #023047;
+  margin: 0 0 16px;
+}
+
+.module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.module-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.module-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #1a1a2e;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+.module-item:hover {
+  background: #eef4ff;
+  border-color: #667eea;
+  transform: translateX(4px);
+}
+
+.module-name {
+  flex: 1;
+}
+
+.module-arrow {
+  color: #667eea;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 12px;
+  transition: transform 0.2s ease;
+}
+.module-item:hover .module-arrow {
+  transform: translateX(4px);
+}

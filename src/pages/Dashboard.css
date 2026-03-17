@@ -1,0 +1,393 @@
+/* ===== Dashboard Layout ===== */
+.dashboard {
+  padding: 30px 40px;
+  font-family: 'Segoe UI', 'Comic Sans MS', cursive, sans-serif;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* ===== Header ===== */
+.dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.dash-header-left h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #023047;
+}
+.dash-header-left p {
+  margin: 4px 0 0;
+  font-size: 1rem;
+  color: #666;
+}
+.level-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffb703, #fb8500);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 14px rgba(251, 133, 0, 0.4);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+.level-badge .lvl-num {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.level-badge .lvl-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 4px 14px rgba(251, 133, 0, 0.4); }
+  50% { box-shadow: 0 4px 24px rgba(251, 133, 0, 0.7); }
+}
+
+/* ===== Stat Cards Row ===== */
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.stat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.stat-icon {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #023047;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ===== Overall Progress ===== */
+.overall-section {
+  background: linear-gradient(135deg, #caf0f8, #e0f7fa);
+  padding: 22px 28px;
+  border-radius: 18px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.overall-section h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: #023047;
+}
+.overall-section .pct-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* ===== Progress Bar ===== */
+.progress-bar {
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  height: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.progress-fill.green {
+  background: linear-gradient(to right, #4caf50, #81c784);
+}
+.progress-fill.blue {
+  background: linear-gradient(to right, #0077b6, #48cae4);
+}
+.progress-fill.orange {
+  background: linear-gradient(to right, #fb8500, #ffb703);
+}
+.progress-fill.pink {
+  background: linear-gradient(to right, #e63946, #f4a261);
+}
+
+/* animated shimmer on progress */
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+  animation: shimmer 2.5s infinite;
+}
+@keyframes shimmer {
+  0% { left: -60%; }
+  100% { left: 160%; }
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  font-size: 1.15rem;
+  color: #023047;
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== Course Cards Grid ===== */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.course-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.course-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+}
+.course-card h4 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+  color: #023047;
+}
+.course-meta {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+.course-card .progress-bar {
+  height: 10px;
+  margin: 8px 0 0;
+}
+.course-pct {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #023047;
+  margin-top: 6px;
+  text-align: right;
+}
+.course-status {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-top: 8px;
+}
+.course-status.completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.course-status.in-progress {
+  background: #fff3e0;
+  color: #e65100;
+}
+.course-status.not-started {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+/* continue btn */
+.continue-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0077b6, #48cae4);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.continue-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(0, 119, 182, 0.35);
+}
+
+/* ===== Badges ===== */
+.badges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.badge-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+.badge-card:hover {
+  transform: scale(1.05);
+}
+.badge-card.locked {
+  opacity: 0.45;
+  filter: grayscale(0.7);
+}
+.badge-icon {
+  font-size: 1.6rem;
+}
+.badge-info {
+  display: flex;
+  flex-direction: column;
+}
+.badge-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #023047;
+}
+.badge-desc {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+/* ===== Streak & Actions ===== */
+.streak-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  padding: 16px 22px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+.streak-fire {
+  font-size: 2rem;
+  animation: flame 0.8s ease-in-out infinite alternate;
+}
+@keyframes flame {
+  from { transform: scale(1) rotate(-3deg); }
+  to { transform: scale(1.15) rotate(3deg); }
+}
+.streak-info h4 {
+  margin: 0;
+  color: #e65100;
+  font-size: 1.1rem;
+}
+.streak-info p {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: #999;
+}
+.streak-days {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+}
+.streak-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #eee;
+}
+.streak-dot.active {
+  background: linear-gradient(135deg, #ff6b35, #ffb703);
+  box-shadow: 0 0 6px rgba(255, 107, 53, 0.5);
+}
+
+/* ===== Actions ===== */
+.dash-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.action-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+.action-btn.primary {
+  background: linear-gradient(135deg, #0077b6, #48cae4);
+  color: #fff;
+}
+.action-btn.secondary {
+  background: #f0f0f0;
+  color: #555;
+}
+.action-btn.danger {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* ===== Motivational Quote ===== */
+.quote-section {
+  text-align: center;
+  padding: 18px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ede7f6, #e8eaf6);
+  margin-bottom: 10px;
+}
+.quote-section p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+.quote-section span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .dashboard { padding: 20px 16px; }
+  .stat-cards { grid-template-columns: repeat(2, 1fr); }
+  .courses-grid { grid-template-columns: 1fr; }
+  .dash-header { flex-direction: column; text-align: center; gap: 12px; }
+  .streak-section { flex-direction: column; text-align: center; }
+  .streak-days { margin-left: 0; }
+}
