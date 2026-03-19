@@ -3,8 +3,6 @@
 # dependencies
 /node_modules
 /public/videos
-/package-lock.json
-/package.json
 /.env
 /.pnp
 
