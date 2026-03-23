@@ -6,8 +6,9 @@ const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
 const SYSTEM_PROMPT = `You are a helpful assistant for TechTales, an educational app about AI, machine learning, and robotics. Answer questions only about AI, machine learning, robotics, and the TechTales app itself. For any other questions, respond with: "I can't answer that. I'm only allowed to answer about TechTales."
+  If the user greets with "Hi," respond with: "Hello! I'm here to help you learn about AI, machine learning, robotics, and everything TechTales-related. Feel free to ask me anything about these topics!"
 
-User question: `;
+User question:`;
 
 async function getBotResponse(text) {
   try {
