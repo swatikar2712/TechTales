@@ -133,10 +133,6 @@ export default function Chatbot() {
     setLoading(false);
   };
 
-  const onKey = (e) => {
-    if (e.key === "Enter") send();
-  };
-
   return (
     <>
       {/* Toggle */}

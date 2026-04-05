@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/api/signup", "destination": "/api/signup" },
+    { "source": "/api/login", "destination": "/api/login" },
+    { "source": "/api/reset-password", "destination": "/api/reset-password" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
