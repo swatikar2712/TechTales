@@ -1,4 +1,4 @@
-const CACHE_NAME = 'techtales-v1';
+const CACHE_NAME = 'techtales-v2';
 const STATIC_ASSETS = [
   '/',
   '/index.html',

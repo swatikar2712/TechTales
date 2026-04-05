@@ -2,7 +2,7 @@ const sharp = require('sharp');
 const path = require('path');
 const fs = require('fs');
 
-const svgPath = path.join(__dirname, 'public', 'favicon.svg');
+const svgPath = path.join(__dirname, 'public', 'app-icon.svg');
 const svg = fs.readFileSync(svgPath);
 
 async function generate() {
@@ -33,6 +33,33 @@ async function generate() {
     .png()
     .toFile(path.join(__dirname, 'public', 'favicon-64.png'));
   console.log('Created favicon-64.png');
+
+  // Generate favicon.ico (32x32 PNG wrapped as .ico)
+  const pngBuffer = await sharp(svg)
+    .resize(32, 32)
+    .png()
+    .toBuffer();
+
+  // Create ICO file from PNG
+  const imageSize = pngBuffer.length;
+  const icoHeader = Buffer.alloc(6);
+  icoHeader.writeUInt16LE(0, 0);      // Reserved
+  icoHeader.writeUInt16LE(1, 2);      // ICO type
+  icoHeader.writeUInt16LE(1, 4);      // 1 image
+
+  const dirEntry = Buffer.alloc(16);
+  dirEntry.writeUInt8(32, 0);         // Width
+  dirEntry.writeUInt8(32, 1);         // Height
+  dirEntry.writeUInt8(0, 2);          // Color palette
+  dirEntry.writeUInt8(0, 3);          // Reserved
+  dirEntry.writeUInt16LE(1, 4);       // Color planes
+  dirEntry.writeUInt16LE(32, 6);      // Bits per pixel
+  dirEntry.writeUInt32LE(imageSize, 8);  // Image size
+  dirEntry.writeUInt32LE(22, 12);     // Offset (6 + 16 = 22)
+
+  const ico = Buffer.concat([icoHeader, dirEntry, pngBuffer]);
+  fs.writeFileSync(path.join(__dirname, 'public', 'favicon.ico'), ico);
+  console.log('Created favicon.ico');
 
   console.log('All icons generated!');
 }
