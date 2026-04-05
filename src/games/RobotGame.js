@@ -27,7 +27,7 @@ function RobotGame() {
         if (robot.x === x && robot.y === y) content = "🤖";
         else if (goal.x === x && goal.y === y) content = "⭐";
         cells.push(
-          <td key={x} style={{ width: "60px", height: "60px", border: "1px solid #023047", textAlign: "center", fontSize: "2em" }}>
+          <td key={x} style={{ width: "60px", height: "60px", border: "1px solid #6A0DAD", textAlign: "center", fontSize: "2em" }}>
             {content}
           </td>
         );
@@ -38,7 +38,7 @@ function RobotGame() {
   };
 
   return (
-    <div style={{ textAlign: "center", fontFamily: "Comic Sans MS, cursive", padding: "50px", backgroundColor: "#fefae0", minHeight: "100vh" }}>
+    <div style={{ textAlign: "center", fontFamily: "Comic Sans MS, cursive", padding: "50px", backgroundColor: "#fff", minHeight: "100vh" }}>
       <h1>🤖 Code the Robot</h1>
       <p>{message}</p>
       <table style={{ margin: "20px auto", borderCollapse: "collapse" }}>
@@ -60,8 +60,8 @@ const buttonStyle = {
   borderRadius: "15px",
   border: "none",
   cursor: "pointer",
-  backgroundColor: "#ffb703",
-  color: "#023047",
+  backgroundColor: "#FFD700",
+  color: "#6A0DAD",
   transition: "transform 0.2s"
 };
 

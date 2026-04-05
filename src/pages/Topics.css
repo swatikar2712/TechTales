@@ -1,5 +1,6 @@
 /* ═══════════════════════════════════════════
    Topics Page
+   Palette: #FFD700 · #FFF176 · #D4A017 · #6A0DAD · #8A2BE2
    ═══════════════════════════════════════════ */
 
 .topics-page {
@@ -7,7 +8,7 @@
 }
 
 .topics-empty {
-  color: #888;
+  color: #636e72;
   text-align: center;
   padding: 40px 0;
 }
@@ -26,14 +27,20 @@
   gap: 14px;
   padding: 16px 20px;
   background: #fff;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 14px;
+  border: 2px solid var(--tt-soft-yellow);
+  border-radius: 16px;
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
 }
+.topic-row:nth-child(4n+1) { border-color: var(--tt-bright-yellow); }
+.topic-row:nth-child(4n+2) { border-color: var(--tt-violet); }
+.topic-row:nth-child(4n+3) { border-color: var(--tt-mustard); }
+.topic-row:nth-child(4n+4) { border-color: var(--tt-purple); }
+.topic-row:nth-child(4n+1):hover { background: var(--tt-soft-yellow); border-color: var(--tt-mustard); }
+.topic-row:nth-child(4n+2):hover { background: #fff; border-color: var(--tt-purple); }
+.topic-row:nth-child(4n+3):hover { background: var(--tt-soft-yellow); border-color: var(--tt-bright-yellow); }
+.topic-row:nth-child(4n+4):hover { background: #fff; border-color: var(--tt-violet); }
 .topic-row:hover {
-  background: #f5f7ff;
-  border-color: #c0c8f0;
   transform: translateX(4px);
 }
 
@@ -41,28 +48,28 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   color: #fff;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 800;
   flex-shrink: 0;
 }
 
 .topic-title {
   flex: 1;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
-  color: #1a1a2e;
+  color: #2d3436;
 }
 
 .topic-arrow {
-  color: #aaa;
+  color: #ccc;
   font-size: 1.1rem;
   transition: transform 0.2s ease, color 0.2s ease;
 }
-.topic-row:hover .topic-arrow {
-  color: #667eea;
-  transform: translateX(4px);
-}
+.topic-row:nth-child(4n+1):hover .topic-arrow { color: var(--tt-mustard); transform: translateX(4px); }
+.topic-row:nth-child(4n+2):hover .topic-arrow { color: var(--tt-purple); transform: translateX(4px); }
+.topic-row:nth-child(4n+3):hover .topic-arrow { color: var(--tt-bright-yellow); transform: translateX(4px); }
+.topic-row:nth-child(4n+4):hover .topic-arrow { color: var(--tt-violet); transform: translateX(4px); }

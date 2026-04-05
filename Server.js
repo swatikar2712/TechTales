@@ -21,6 +21,11 @@ app.post('/api/signup', async (req, res) => {
     return res.status(400).json({ error: "Please provide both name and password!" });
   }
 
+  // 2. Password strength check
+  if (password.length < 8 || !/[^A-Za-z0-9]/.test(password)) {
+    return res.status(400).json({ error: "8 characters necessary along with at least one special character" });
+  }
+
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
     
@@ -41,6 +46,34 @@ app.post('/api/signup', async (req, res) => {
     } else {
       res.status(500).json({ error: "Internal server error. Check your terminal!" });
     }
+  }
+});
+
+// RESET PASSWORD ROUTE
+app.post('/api/reset-password', async (req, res) => {
+  const { username, newPassword } = req.body;
+
+  if (!username || !newPassword) {
+    return res.status(400).json({ error: "Please provide username and new password!" });
+  }
+
+  if (newPassword.length < 8 || !/[^A-Za-z0-9]/.test(newPassword)) {
+    return res.status(400).json({ error: "8 characters necessary along with at least one special character" });
+  }
+
+  try {
+    const user = await pool.query('SELECT id FROM users WHERE username = $1', [username]);
+    if (user.rows.length === 0) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+    await pool.query('UPDATE users SET password_hash = $1 WHERE username = $2', [hashedPassword, username]);
+
+    res.json({ message: "Password reset successfully!" });
+  } catch (err) {
+    console.error("Reset Error:", err.message);
+    res.status(500).json({ error: "Internal server error." });
   }
 });
 

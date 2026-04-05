@@ -2,6 +2,19 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Auth.css";
 
+const AivaIcon = () => (
+  <svg width="64" height="64" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="60" fill="#ffffff" stroke="#c0c0c0" strokeWidth="3" />
+    <circle cx="75" cy="90" r="15" fill="#00bfff" />
+    <circle cx="125" cy="90" r="15" fill="#00bfff" />
+    <circle cx="70" cy="85" r="5" fill="#ffffff" />
+    <circle cx="120" cy="85" r="5" fill="#ffffff" />
+    <path d="M75 115 Q100 135 125 115" stroke="#333" strokeWidth="3" fill="none" strokeLinecap="round" />
+    <ellipse cx="40" cy="120" rx="10" ry="20" fill="#ffffff" stroke="#c0c0c0" strokeWidth="2" />
+    <ellipse cx="160" cy="120" rx="10" ry="20" fill="#ffffff" stroke="#c0c0c0" strokeWidth="2" />
+  </svg>
+);
+
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -36,9 +49,9 @@ function Login() {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <div className="auth-icon">{"\uD83D\uDD11"}</div>
+        <div className="auth-icon"><AivaIcon /></div>
         <h2>Welcome Back!</h2>
-        <p className="auth-sub">Enter the World of TechTales</p>
+        <p className="auth-sub">AIVA missed you! Let's get back to learning.</p>
 
         {error && <div className="auth-error">{error}</div>}
 
@@ -70,6 +83,9 @@ function Login() {
 
         <p className="auth-footer">
           {"Don\u2019t have an account? "}<Link to="/signup">Sign up</Link>
+        </p>
+        <p className="auth-footer">
+          <Link to="/forgot-password">Forgot Password?</Link>
         </p>
       </div>
     </div>

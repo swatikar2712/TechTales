@@ -15,7 +15,7 @@ function WebBuilderGame() {
   };
 
   return (
-    <div style={{ textAlign: "center", fontFamily: "Comic Sans MS, cursive", padding: "50px", backgroundColor: "#fefae0", minHeight: "100vh" }}>
+    <div style={{ textAlign: "center", fontFamily: "Comic Sans MS, cursive", padding: "50px", backgroundColor: "#fff", minHeight: "100vh" }}>
       <h1>🌐 Web Builder</h1>
       <p>{message}</p>
       <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "30px" }}>
@@ -23,7 +23,7 @@ function WebBuilderGame() {
         <button onClick={() => setImage(!image)} style={componentStyle}>{image ? "🖼️ Image ✔️" : "🖼️ Image"}</button>
         <button onClick={() => setButton(!button)} style={componentStyle}>{button ? "🔘 Button ✔️" : "🔘 Button"}</button>
       </div>
-      <button onClick={checkPage} style={{ ...componentStyle, marginTop: "30px", backgroundColor: "#ffb703" }}>Check Page</button>
+      <button onClick={checkPage} style={{ ...componentStyle, marginTop: "30px", backgroundColor: "#FFD700", color: "#6A0DAD" }}>Check Page</button>
     </div>
   );
 }
@@ -34,8 +34,8 @@ const componentStyle = {
   borderRadius: "15px",
   border: "none",
   cursor: "pointer",
-  backgroundColor: "#8ecae6",
-  color: "#023047",
+  backgroundColor: "#8A2BE2",
+  color: "#fff",
   transition: "transform 0.2s"
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Auth.css";
 
 const AivaIcon = () => (
@@ -15,32 +15,42 @@ const AivaIcon = () => (
   </svg>
 );
 
-function Signup() {
+function ForgotPassword() {
   const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
-  const navigate = useNavigate();
+  const [success, setSuccess] = useState("");
 
-  const isPasswordValid = password.length >= 8 && /[^A-Za-z0-9]/.test(password);
+  const isPasswordValid = newPassword.length >= 8 && /[^A-Za-z0-9]/.test(newPassword);
 
-  const handleSignup = async (e) => {
+  const handleReset = async (e) => {
     e.preventDefault();
     setError("");
+    setSuccess("");
 
     if (!isPasswordValid) {
       setError("8 characters necessary along with at least one special character");
       return;
     }
 
+    if (newPassword !== confirmPassword) {
+      setError("Passwords don't match!");
+      return;
+    }
+
     try {
-      const response = await fetch("http://localhost:5000/api/signup", {
+      const response = await fetch("http://localhost:5000/api/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, newPassword }),
       });
 
       if (response.ok) {
-        navigate("/login");
+        setSuccess("Password reset successfully! You can now log in.");
+        setUsername("");
+        setNewPassword("");
+        setConfirmPassword("");
       } else {
         const data = await response.json();
         setError(data.error || "Something went wrong!");
@@ -54,49 +64,57 @@ function Signup() {
     <div className="auth-page">
       <div className="auth-card">
         <div className="auth-icon"><AivaIcon /></div>
-        <h2>Join TechTales</h2>
-        <p className="auth-sub">AIVA can't wait to meet you!</p>
+        <h2>Reset Password</h2>
+        <p className="auth-sub">Don't worry, AIVA will help you get back in!</p>
 
         {error && <div className="auth-error">{error}</div>}
+        {success && <div className="auth-success">{success}</div>}
 
-        <form onSubmit={handleSignup} className="auth-form">
+        <form onSubmit={handleReset} className="auth-form">
           <div className="auth-field">
-            <label>Pick a Username</label>
+            <label>Username</label>
             <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="Choose a cool name"
+              placeholder="Your username"
               required
             />
           </div>
           <div className="auth-field">
-            <label>Choose a Password</label>
+            <label>New Password</label>
             <input
               type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Make it secret!"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              placeholder="Enter new password"
               required
             />
-            <p className={`password-hint ${password && !isPasswordValid ? "invalid" : ""} ${password && isPasswordValid ? "valid" : ""}`}>
+            <p className={`password-hint ${newPassword && !isPasswordValid ? "invalid" : ""} ${newPassword && isPasswordValid ? "valid" : ""}`}>
               8 characters necessary along with at least one special character
             </p>
           </div>
-          <button type="submit" className="auth-submit signup-btn">
-            Create My Account
+          <div className="auth-field">
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Confirm new password"
+              required
+            />
+          </div>
+          <button type="submit" className="auth-submit login-btn">
+            Reset Password
           </button>
         </form>
 
         <p className="auth-footer">
-          Already have an account? <Link to="/login">Log in</Link>
-        </p>
-        <p className="auth-footer">
-          <Link to="/forgot-password">Forgot Password?</Link>
+          Remember your password? <Link to="/login">Log in</Link>
         </p>
       </div>
     </div>
   );
 }
 
-export default Signup;
+export default ForgotPassword;

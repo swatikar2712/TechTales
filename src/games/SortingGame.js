@@ -21,7 +21,7 @@ function SortingGame() {
   };
 
   return (
-    <div style={{ textAlign: "center", fontFamily: "Comic Sans MS, cursive", padding: "50px", backgroundColor: "#fefae0", minHeight: "100vh" }}>
+    <div style={{ textAlign: "center", fontFamily: "Comic Sans MS, cursive", padding: "50px", backgroundColor: "#fff", minHeight: "100vh" }}>
       <h1>🧩 Sorting Puzzle</h1>
       <p>{message}</p>
       <div style={{ display: "flex", justifyContent: "center", gap: "15px", marginTop: "20px" }}>
@@ -33,7 +33,7 @@ function SortingGame() {
           </div>
         ))}
       </div>
-      <button onClick={checkSorted} style={{ ...componentStyle, marginTop: "30px", backgroundColor: "#ffb703" }}>Check</button>
+      <button onClick={checkSorted} style={{ ...componentStyle, marginTop: "30px", backgroundColor: "#FFD700", color: "#6A0DAD" }}>Check</button>
     </div>
   );
 }
@@ -43,8 +43,8 @@ const componentStyle = {
   borderRadius: "15px",
   border: "none",
   cursor: "pointer",
-  backgroundColor: "#8ecae6",
-  color: "#023047",
+  backgroundColor: "#8A2BE2",
+  color: "#fff",
   fontSize: "16px",
   transition: "transform 0.2s"
 };

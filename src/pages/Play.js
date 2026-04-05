@@ -7,11 +7,11 @@ import SortingGame from "../games/SortingGame";
 import "./Play.css";
 
 const GAMES = [
-  { key: "robot",   title: "Code the Robot",   icon: "\uD83E\uDD16", color: "#667eea", desc: "Program a robot to move" },
-  { key: "circuit", title: "Circuit Builder",   icon: "\u26A1",       color: "#0077b6", desc: "Build working circuits" },
-  { key: "web",     title: "Web Builder",       icon: "\uD83C\uDF10", color: "#43aa8b", desc: "Create web pages visually" },
-  { key: "data",    title: "Data Explorer",     icon: "\uD83D\uDEE1\uFE0F", color: "#fb8500", desc: "Explore and analyze data" },
-  { key: "sorting", title: "Sorting Puzzle",    icon: "\uD83E\uDDE9", color: "#f72585", desc: "Solve sorting challenges" },
+  { key: "robot",   title: "Code the Robot",   icon: "\uD83E\uDD16", color: "#FFD700", desc: "Program a robot to move" },
+  { key: "circuit", title: "Circuit Builder",   icon: "\u26A1",       color: "#6A0DAD", desc: "Build working circuits" },
+  { key: "web",     title: "Web Builder",       icon: "\uD83C\uDF10", color: "#8A2BE2", desc: "Create web pages visually" },
+  { key: "data",    title: "Data Explorer",     icon: "\uD83D\uDEE1\uFE0F", color: "#D4A017", desc: "Explore and analyze data" },
+  { key: "sorting", title: "Sorting Puzzle",    icon: "\uD83E\uDDE9", color: "#FFF176", desc: "Solve sorting challenges" },
 ];
 
 function Play() {
