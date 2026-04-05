@@ -6,6 +6,7 @@ import "./Chatbot.css";
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
+<<<<<<< HEAD
 /* ── Mini AIVA Robot SVG ── */
 const AivaAvatar = ({ size = 36 }) => (
   <svg width={size} height={size} viewBox="0 0 200 200" className="aiva-avatar">
@@ -51,8 +52,12 @@ When users ask about where to learn a topic, which unit to start from, or anythi
 - Unit 7: Fun Facts About Robots → [Start Lesson](/lesson/robotics/7)
 
 Always include the markdown links (e.g. [Unit title](/lesson/ai/1)) when recommending lessons. For beginners, suggest starting with AI Unit 1. Use the exact link paths shown above.
+=======
+const SYSTEM_PROMPT = `You are a helpful assistant for TechTales, an educational app about AI, machine learning, and robotics. Answer questions only about AI, machine learning, robotics, and the TechTales app itself. For any other questions, respond with: "I can't answer that. I'm only allowed to answer about TechTales."
+  If the user greets with "Hi," respond with: "Hello! I'm here to help you learn about AI, machine learning, robotics, and everything TechTales-related. Feel free to ask me anything about these topics!"
+>>>>>>> 27acee189718013d5efe107c21644f248d8d1ddf
 
-User question: `;
+User question:`;
 
 async function getBotResponse(text) {
   try {
