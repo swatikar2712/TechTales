@@ -57,6 +57,20 @@
   flex-shrink: 0;
 }
 
+.topic-unit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tt-bright-yellow);
+  color: #2d3436;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .topic-title {
   flex: 1;
   font-weight: 700;

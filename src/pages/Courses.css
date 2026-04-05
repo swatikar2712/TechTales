@@ -81,6 +81,21 @@
   transform: translateX(4px);
 }
 
+.module-unit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tt-bright-yellow);
+  color: #2d3436;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-right: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .module-name {
   flex: 1;
 }

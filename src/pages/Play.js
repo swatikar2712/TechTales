@@ -6,10 +6,46 @@ import WordChallengeGame from "../games/WordChallengeGame";
 import "./Play.css";
 
 const GAMES = [
-  { key: "train",   title: "Train the Model",      icon: "\uD83E\uDDE0", color: "#C4A8D8", desc: "Label data to teach an AI classifier \u2014 see how training quality affects accuracy!" },
-  { key: "pattern", title: "AI Pattern Detective",  icon: "\uD83D\uDD0D", color: "#FFE082", desc: "Spot hidden patterns in sequences \u2014 the same skill AI uses to learn from data!" },
-  { key: "robot",   title: "Robot Commander",       icon: "\uD83E\uDD16", color: "#8E6FBF", desc: "Write a program of commands, then watch your robot execute the mission!" },
-  { key: "circuit", title: "AI Word Challenge",    icon: "🔤", color: "#56CCF2", desc: "Drag letters to form AI keywords you've learned in the course!" },
+  {
+    key: "train",
+    title: "Train the Model",
+    icon: "\uD83E\uDDE0",
+    gradient: "linear-gradient(135deg, #C4A8D8 0%, #8E6FBF 100%)",
+    accent: "#8E6FBF",
+    tag: "AI",
+    difficulty: "Medium",
+    desc: "Label data to teach an AI classifier — see how training quality affects accuracy!",
+  },
+  {
+    key: "pattern",
+    title: "AI Pattern Detective",
+    icon: "\uD83D\uDD0D",
+    gradient: "linear-gradient(135deg, #FFE082 0%, #E5B84C 100%)",
+    accent: "#E5B84C",
+    tag: "ML",
+    difficulty: "Easy",
+    desc: "Spot hidden patterns in sequences — the same skill AI uses to learn from data!",
+  },
+  {
+    key: "robot",
+    title: "Robot Commander",
+    icon: "\uD83E\uDD16",
+    gradient: "linear-gradient(135deg, #6C63FF 0%, #5B4A9E 100%)",
+    accent: "#6C63FF",
+    tag: "Robotics",
+    difficulty: "Hard",
+    desc: "Write a program of commands, then watch your robot execute the mission!",
+  },
+  {
+    key: "circuit",
+    title: "AI Word Challenge",
+    icon: "\uD83D\uDD24",
+    gradient: "linear-gradient(135deg, #90CAF9 0%, #56CCF2 100%)",
+    accent: "#56CCF2",
+    tag: "Vocabulary",
+    difficulty: "Easy",
+    desc: "Drag letters to form AI keywords you've learned in the course!",
+  },
 ];
 
 function Play() {
@@ -29,9 +65,17 @@ function Play() {
     <div className="play-page page-card">
       {!selectedGame ? (
         <>
-          <div className="page-header" style={{ textAlign: "center" }}>
-            <h1>Tech Playground</h1>
-            <p>Choose a game to learn technology interactively</p>
+          <div className="play-header">
+            <span className="play-header-emoji">🎮</span>
+            <h1 className="play-header-title">Tech Playground</h1>
+            <p className="play-header-sub">Pick a game, level up your tech skills!</p>
+            <div className="play-stats">
+              <span className="play-stat"><strong>{GAMES.length}</strong> Games</span>
+              <span className="play-stat-dot">·</span>
+              <span className="play-stat"><strong>3</strong> Difficulty levels</span>
+              <span className="play-stat-dot">·</span>
+              <span className="play-stat"><strong>∞</strong> Fun</span>
+            </div>
           </div>
 
           <div className="games-grid">
@@ -39,14 +83,21 @@ function Play() {
               <div
                 key={game.key}
                 className="game-card"
+                style={{ "--card-accent": game.accent, "--card-gradient": game.gradient }}
                 onClick={() => setSelectedGame(game.key)}
               >
-                <div className="game-icon-wrap" style={{ background: game.color + "15" }}>
-                  <span className="game-icon" style={{ color: game.color }}>{game.icon}</span>
+                <div className="game-card-top">
+                  <span className="game-tag">{game.tag}</span>
+                  <span className={`game-difficulty game-difficulty--${game.difficulty.toLowerCase()}`}>
+                    {game.difficulty}
+                  </span>
+                </div>
+                <div className="game-icon-wrap" style={{ background: game.gradient }}>
+                  <span className="game-icon">{game.icon}</span>
                 </div>
                 <h3 className="game-title">{game.title}</h3>
                 <p className="game-desc">{game.desc}</p>
-                <span className="game-play" style={{ color: game.color }}>Play &rarr;</span>
+                <span className="game-play-btn">Play &rarr;</span>
               </div>
             ))}
           </div>

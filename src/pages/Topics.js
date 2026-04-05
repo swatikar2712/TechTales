@@ -52,6 +52,7 @@ function Topics() {
               onClick={() => navigate(`/lesson/${world}/${lesson.id}`)}
             >
               <span className="topic-num" style={{ background: meta.color }}>{idx + 1}</span>
+              <span className="topic-unit">Unit {idx + 1}</span>
               <span className="topic-title">{lesson.title}</span>
               <span className="topic-arrow">&rarr;</span>
             </div>

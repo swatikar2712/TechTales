@@ -24,9 +24,10 @@ function Courses() {
           <div key={course.class} className="course-block">
             <h2 className="course-block-title">{course.title}</h2>
             <div className="module-list">
-              {course.modules.map((mod) => (
+              {course.modules.map((mod, idx) => (
                 <Link key={mod.id} to={`/lesson/${course.class}/${mod.id}`} className="module-link">
                   <div className="module-item">
+                    <span className="module-unit">Unit {idx + 1}</span>
                     <span className="module-name">{mod.title}</span>
                     <span className="module-arrow">&rarr;</span>
                   </div>
