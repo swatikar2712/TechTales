@@ -9,14 +9,31 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 /* ── Mini AIVA Robot SVG ── */
 const AivaAvatar = ({ size = 36 }) => (
   <svg width={size} height={size} viewBox="0 0 200 200" className="aiva-avatar">
-    <circle cx="100" cy="100" r="60" fill="#ffffff" stroke="#c0c0c0" strokeWidth="3" />
-    <circle cx="75" cy="90" r="15" fill="#00bfff" />
-    <circle cx="125" cy="90" r="15" fill="#00bfff" />
-    <circle cx="70" cy="85" r="5" fill="#ffffff" />
-    <circle cx="120" cy="85" r="5" fill="#ffffff" />
-    <path d="M75 115 Q100 135 125 115" stroke="#333" strokeWidth="3" fill="none" strokeLinecap="round" />
-    <ellipse cx="40" cy="120" rx="10" ry="20" fill="#ffffff" stroke="#c0c0c0" strokeWidth="2" />
-    <ellipse cx="160" cy="120" rx="10" ry="20" fill="#ffffff" stroke="#c0c0c0" strokeWidth="2" />
+    {/* Antenna */}
+    <line x1="100" y1="42" x2="100" y2="22" stroke="#C4A8D8" strokeWidth="3" strokeLinecap="round" />
+    <circle cx="100" cy="18" r="6" fill="#FFE082" />
+    {/* Ears */}
+    <circle cx="38" cy="80" r="12" fill="#C4A8D8" />
+    <circle cx="38" cy="80" r="6" fill="#FFE082" />
+    <circle cx="162" cy="80" r="12" fill="#C4A8D8" />
+    <circle cx="162" cy="80" r="6" fill="#FFE082" />
+    {/* Face */}
+    <circle cx="100" cy="100" r="58" fill="#f5f0fa" stroke="#C4A8D8" strokeWidth="3" />
+    {/* Eyes — big & sparkly */}
+    <ellipse cx="76" cy="90" rx="14" ry="15" fill="#4E2A1A" />
+    <ellipse cx="124" cy="90" rx="14" ry="15" fill="#4E2A1A" />
+    <circle cx="71" cy="84" r="5" fill="#ffffff" />
+    <circle cx="119" cy="84" r="5" fill="#ffffff" />
+    <circle cx="80" cy="92" r="2.5" fill="#ffffff" />
+    <circle cx="128" cy="92" r="2.5" fill="#ffffff" />
+    {/* Rosy cheeks */}
+    <circle cx="58" cy="108" r="10" fill="#f8c4c4" opacity="0.5" />
+    <circle cx="142" cy="108" r="10" fill="#f8c4c4" opacity="0.5" />
+    {/* Smile */}
+    <path d="M74 116 Q100 140 126 116" stroke="#4E2A1A" strokeWidth="3" fill="none" strokeLinecap="round" />
+    {/* Arms — waving */}
+    <ellipse cx="40" cy="125" rx="9" ry="18" fill="#f5f0fa" stroke="#C4A8D8" strokeWidth="2" />
+    <ellipse cx="160" cy="125" rx="9" ry="18" fill="#f5f0fa" stroke="#C4A8D8" strokeWidth="2" />
   </svg>
 );
 

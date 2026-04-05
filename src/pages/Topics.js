@@ -2,9 +2,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./Topics.css";
 
 const WORLD_META = {
-  ai:       { label: "AI World",      color: "#FFD700" },
-  ml:       { label: "ML World",      color: "#8A2BE2" },
-  robotics: { label: "Robotics World", color: "#D4A017" },
+  ai:       { label: "AI World",      color: "#FFE082" },
+  ml:       { label: "ML World",      color: "#C4A8D8" },
+  robotics: { label: "Robotics World", color: "#E5B84C" },
 };
 
 function Topics() {
@@ -32,7 +32,7 @@ function Topics() {
   };
 
   const lessons = data[world] || [];
-  const meta = WORLD_META[world] || { label: world, color: "#FFD700" };
+  const meta = WORLD_META[world] || { label: world, color: "#FFE082" };
 
   return (
     <div className="topics-page page-card">

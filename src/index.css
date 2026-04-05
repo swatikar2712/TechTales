@@ -1,22 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* ── TechTales Palette (strict 5 colors) ── */
-  --tt-bright-yellow: #FFD700;
-  --tt-soft-yellow: #FFF176;
-  --tt-mustard: #D4A017;
-  --tt-purple: #6A0DAD;
-  --tt-violet: #8A2BE2;
+  /* ── TechTales Palette — Multi-shade Purple + Butter Yellow + Accents ── */
+  --tt-dark-purple: #5B4A9E;    /* navbar, strong CTA */
+  --tt-purple: #6C63FF;         /* primary – hero, headings */
+  --tt-purple-mid: #8A7CFF;     /* secondary – hover, tags */
+  --tt-violet: #C4A8D8;         /* light accent borders */
+  --tt-purple-bg: #F4F2FF;      /* light purple background sections */
+  --tt-bright-yellow: #FFD54F;  /* slightly deeper butter yellow – more visible */
+  --tt-soft-yellow: #FFF8E1;
+  --tt-mustard: #E5B84C;
+  /* Accent extras */
+  --tt-soft-pink: #FFB6C1;      /* soft pink accent */
+  --tt-soft-blue: #90CAF9;      /* soft blue accent */
+  /* ── Fonts ── */
+  --font-heading: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Open Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #1a1a2e;
+  scroll-behavior: smooth;
+  background: #f7f6fb;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }

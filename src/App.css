@@ -1,6 +1,5 @@
 /* ═══════════════════════════════════════════
    TechTales — Global Styles
-   Palette: #FFD700 · #FFF176 · #D4A017 · #6A0DAD · #8A2BE2
    ═══════════════════════════════════════════ */
 
 /* ── Reset & Base ── */
@@ -9,7 +8,7 @@
 .tt-app {
   min-height: 100vh;
   background: #fff;
-  font-family: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   color: #1a1a2e;
 }
 
@@ -23,11 +22,15 @@
   justify-content: space-between;
   padding: 0 32px;
   height: 64px;
-  background: var(--tt-purple);
-  box-shadow: 0 4px 20px rgba(106, 13, 173, 0.3);
+  background: rgba(91, 74, 158, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(91, 74, 158, 0.35);
+  transition: background 0.3s ease;
 }
 
 .tt-brand {
+  font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 800;
   color: #fff;
@@ -38,7 +41,10 @@
   letter-spacing: -0.5px;
 }
 .tt-logo-icon {
-  font-size: 1.5rem;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.2));
 }
 
 .tt-nav-links {
@@ -61,8 +67,8 @@
 }
 .tt-nav-link.active {
   background: var(--tt-bright-yellow);
-  color: var(--tt-purple);
-  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+  color: var(--tt-dark-purple);
+  box-shadow: 0 2px 12px rgba(255, 213, 79, 0.5);
 }
 
 /* Auth button in navbar */
@@ -78,11 +84,11 @@
 }
 .tt-nav-auth.login-link {
   background: var(--tt-bright-yellow);
-  color: var(--tt-purple);
-  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.4);
+  color: var(--tt-dark-purple);
+  box-shadow: 0 2px 12px rgba(255, 213, 79, 0.5);
 }
 .tt-nav-auth.login-link:hover {
-  box-shadow: 0 4px 18px rgba(255, 215, 0, 0.6);
+  box-shadow: 0 4px 20px rgba(255, 213, 79, 0.7);
   transform: translateY(-1px);
 }
 .tt-nav-auth.logout {
@@ -99,17 +105,17 @@
 
 /* ── Main Content Area ── */
 .tt-main {
-  max-width: 1140px;
+  max-width: 1340px;
   margin: 28px auto;
   padding: 0 24px;
-  animation: fadeSlide 0.4s ease;
+  animation: fadeSlideUp 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ── Page Card ── */
 .page-card {
   background: #fff;
   border-radius: 24px;
-  box-shadow: 0 4px 24px rgba(106, 13, 173, 0.07);
+  box-shadow: 0 4px 24px rgba(108, 99, 255, 0.06);
   padding: 40px;
   min-height: 60vh;
 }
@@ -121,12 +127,12 @@
 .page-header h1 {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #2d3436;
+  color: #1a1a2e;
   margin: 0 0 6px;
 }
 .page-header p {
   font-size: 1rem;
-  color: #636e72;
+  color: #555;
   margin: 0;
 }
 
@@ -148,8 +154,8 @@
 }
 .tt-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(106, 13, 173, 0.14);
-  border-color: var(--tt-violet);
+  box-shadow: 0 8px 28px rgba(108, 99, 255, 0.12);
+  border-color: var(--tt-purple-mid);
 }
 
 /* ── Buttons ── */
@@ -163,12 +169,12 @@
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
-  font-family: inherit;
+  font-family: var(--font-heading);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .tt-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 .tt-btn-primary {
   background: var(--tt-purple);
@@ -176,7 +182,8 @@
 }
 .tt-btn-accent {
   background: var(--tt-bright-yellow);
-  color: var(--tt-purple);
+  color: var(--tt-dark-purple);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 .tt-btn-ghost {
   background: transparent;
@@ -188,8 +195,8 @@
 }
 
 /* ── Keyframes ── */
-@keyframes fadeSlide {
-  from { opacity: 0; transform: translateY(12px); }
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 

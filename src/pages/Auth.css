@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════
    Auth — Login & Signup Pages
-   Palette: #FFD700 · #FFF176 · #D4A017 · #6A0DAD · #8A2BE2
+   Palette: Lilac (#8E6FBF · #C4A8D8) & Butter Yellow (#FFE082 · #FFF8E1 · #E5B84C)
    ═══════════════════════════════════════════ */
 
 .auth-page {
@@ -18,7 +18,7 @@
   background: #fff;
   border-radius: 26px;
   padding: 44px 36px;
-  box-shadow: 0 16px 56px rgba(106, 13, 173, 0.22);
+  box-shadow: 0 16px 56px rgba(142, 111, 191, 0.22);
   animation: fadeSlide 0.45s ease;
   text-align: center;
 }
@@ -91,7 +91,7 @@
 }
 .auth-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(106, 13, 173, 0.25);
+  box-shadow: 0 6px 20px rgba(142, 111, 191, 0.25);
 }
 .auth-submit.login-btn {
   background: var(--tt-purple);

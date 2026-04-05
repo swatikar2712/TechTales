@@ -18,6 +18,42 @@ export const courses = [
             ],
             answer: "Artificial Intelligence",
           },
+          {
+            question: "Which of these is an example of AI?",
+            options: [
+              "A voice assistant like Siri or Alexa",
+              "A regular calculator",
+              "A light switch",
+            ],
+            answer: "A voice assistant like Siri or Alexa",
+          },
+          {
+            question: "What does AI try to mimic?",
+            options: [
+              "Human intelligence and decision-making",
+              "The speed of a car engine",
+              "The color of objects",
+            ],
+            answer: "Human intelligence and decision-making",
+          },
+          {
+            question: "Who is known as the father of Artificial Intelligence?",
+            options: [
+              "John McCarthy",
+              "Albert Einstein",
+              "Isaac Newton",
+            ],
+            answer: "John McCarthy",
+          },
+          {
+            question: "AI needs _____ to learn and make decisions.",
+            options: [
+              "Data",
+              "Paint",
+              "Sunlight",
+            ],
+            answer: "Data",
+          },
         ],
       },
       {
@@ -37,6 +73,42 @@ export const courses = [
             answer:
               "AI operates based on programmed algorithms and data patterns",
           },
+          {
+            question: "What can humans do that AI currently cannot?",
+            options: [
+              "Feel emotions and have consciousness",
+              "Process large amounts of data quickly",
+              "Work 24 hours without rest",
+            ],
+            answer: "Feel emotions and have consciousness",
+          },
+          {
+            question: "Which task is AI generally faster at than humans?",
+            options: [
+              "Analyzing millions of data points",
+              "Writing a poem with deep emotion",
+              "Understanding sarcasm in conversation",
+            ],
+            answer: "Analyzing millions of data points",
+          },
+          {
+            question: "Human intelligence is powered by the _____, while AI is powered by _____.",
+            options: [
+              "Brain; computers and algorithms",
+              "Internet; electricity",
+              "Heart; solar energy",
+            ],
+            answer: "Brain; computers and algorithms",
+          },
+          {
+            question: "Can AI be creative like humans?",
+            options: [
+              "It can generate creative outputs but doesn't truly understand them",
+              "Yes, AI feels inspiration just like humans",
+              "No, AI cannot produce anything creative at all",
+            ],
+            answer: "It can generate creative outputs but doesn't truly understand them",
+          },
         ],
       },
       {
@@ -50,6 +122,42 @@ export const courses = [
               "Which type of AI is designed to perform a specific task?",
             options: ["General AI", "Narrow AI", "Strong AI"],
             answer: "Narrow AI",
+          },
+          {
+            question: "What is General AI (AGI)?",
+            options: [
+              "AI that can understand and learn any task like a human",
+              "AI that only plays chess",
+              "AI that runs on old computers",
+            ],
+            answer: "AI that can understand and learn any task like a human",
+          },
+          {
+            question: "Which of these is an example of Narrow AI?",
+            options: [
+              "A spam email filter",
+              "A robot that can do everything a human can",
+              "A self-aware computer",
+            ],
+            answer: "A spam email filter",
+          },
+          {
+            question: "Super AI is _____ compared to human intelligence.",
+            options: [
+              "Smarter and more capable in every way",
+              "Exactly the same",
+              "Less capable",
+            ],
+            answer: "Smarter and more capable in every way",
+          },
+          {
+            question: "Does General AI (AGI) exist today?",
+            options: [
+              "No, it is still a goal for future research",
+              "Yes, it is in every smartphone",
+              "Yes, ChatGPT is General AI",
+            ],
+            answer: "No, it is still a goal for future research",
           },
         ],
       },
@@ -69,6 +177,42 @@ export const courses = [
             ],
             answer: "Experience real emotions and consciousness",
           },
+          {
+            question: "AI can help doctors by _____.",
+            options: [
+              "Analyzing medical scans to detect diseases",
+              "Performing surgery completely on its own without oversight",
+              "Replacing all doctors permanently",
+            ],
+            answer: "Analyzing medical scans to detect diseases",
+          },
+          {
+            question: "Which of these can AI do well today?",
+            options: [
+              "Translate languages in real time",
+              "Understand the meaning of life",
+              "Make moral judgments on its own",
+            ],
+            answer: "Translate languages in real time",
+          },
+          {
+            question: "Why can't AI fully replace human teachers?",
+            options: [
+              "It lacks empathy, emotional understanding, and real-life experience",
+              "It is too expensive",
+              "It cannot display text on a screen",
+            ],
+            answer: "It lacks empathy, emotional understanding, and real-life experience",
+          },
+          {
+            question: "AI works best when it has _____.",
+            options: [
+              "Lots of good quality data to learn from",
+              "Very little information",
+              "No instructions at all",
+            ],
+            answer: "Lots of good quality data to learn from",
+          },
         ],
       },
       {
@@ -86,6 +230,42 @@ export const courses = [
               "Ignoring privacy",
             ],
             answer: "Ensuring fairness and avoiding bias",
+          },
+          {
+            question: "What is AI bias?",
+            options: [
+              "When AI makes unfair decisions because of biased training data",
+              "When AI runs too slowly",
+              "When AI uses too much electricity",
+            ],
+            answer: "When AI makes unfair decisions because of biased training data",
+          },
+          {
+            question: "Why is privacy important in AI?",
+            options: [
+              "AI systems often use personal data that must be protected",
+              "Privacy makes AI run faster",
+              "Privacy is not related to AI at all",
+            ],
+            answer: "AI systems often use personal data that must be protected",
+          },
+          {
+            question: "What does 'transparency' mean in AI ethics?",
+            options: [
+              "People should be able to understand how AI makes decisions",
+              "AI should be invisible to users",
+              "AI code should be written in secret",
+            ],
+            answer: "People should be able to understand how AI makes decisions",
+          },
+          {
+            question: "Who is responsible when AI makes a harmful decision?",
+            options: [
+              "The people and companies who built and deployed the AI",
+              "Nobody — AI is on its own",
+              "The user's computer hardware",
+            ],
+            answer: "The people and companies who built and deployed the AI",
           },
         ],
       },
@@ -493,6 +673,42 @@ export const courses = [
             options: ["Entertainment", "Automation", "Decoration"],
             answer: "Automation",
           },
+          {
+            question: "A robot is a machine that can _____.",
+            options: [
+              "Sense, think, and act on its own or with guidance",
+              "Only sit in one place",
+              "Only make sounds",
+            ],
+            answer: "Sense, think, and act on its own or with guidance",
+          },
+          {
+            question: "Which of these is a real robot?",
+            options: [
+              "A robotic vacuum cleaner like Roomba",
+              "A stuffed toy animal",
+              "A regular bicycle",
+            ],
+            answer: "A robotic vacuum cleaner like Roomba",
+          },
+          {
+            question: "What makes a robot different from a regular machine?",
+            options: [
+              "A robot can be programmed to make decisions and respond to its environment",
+              "A robot is always shaped like a human",
+              "A robot runs on batteries only",
+            ],
+            answer: "A robot can be programmed to make decisions and respond to its environment",
+          },
+          {
+            question: "The word 'robot' originally comes from a Czech word meaning _____.",
+            options: [
+              "Forced labor or work",
+              "Metal friend",
+              "Fast machine",
+            ],
+            answer: "Forced labor or work",
+          },
         ],
       },
       {
@@ -505,6 +721,42 @@ export const courses = [
             question: "Which part senses the environment?",
             options: ["Actuator", "Sensor", "Controller"],
             answer: "Sensor",
+          },
+          {
+            question: "What does an actuator do in a robot?",
+            options: [
+              "It creates movement — like motors that spin wheels or move arms",
+              "It stores data",
+              "It charges the battery",
+            ],
+            answer: "It creates movement — like motors that spin wheels or move arms",
+          },
+          {
+            question: "The 'brain' of a robot is usually a _____.",
+            options: [
+              "Microcontroller or computer processor",
+              "Battery",
+              "Wheel",
+            ],
+            answer: "Microcontroller or computer processor",
+          },
+          {
+            question: "Which part provides energy to a robot?",
+            options: [
+              "Power source (battery or electricity)",
+              "Sensor",
+              "Camera only",
+            ],
+            answer: "Power source (battery or electricity)",
+          },
+          {
+            question: "An end effector is the part of a robot that _____.",
+            options: [
+              "Interacts with objects — like a gripper or tool",
+              "Thinks and makes decisions",
+              "Connects to Wi-Fi",
+            ],
+            answer: "Interacts with objects — like a gripper or tool",
           },
         ],
       },
@@ -519,6 +771,42 @@ export const courses = [
             options: ["Vacuum Cleaner", "Microwave", "Fan"],
             answer: "Vacuum Cleaner",
           },
+          {
+            question: "Robots in factories are mainly used for _____.",
+            options: [
+              "Assembling products on a production line",
+              "Cooking lunch for workers",
+              "Decorating the walls",
+            ],
+            answer: "Assembling products on a production line",
+          },
+          {
+            question: "Which of these uses robots in healthcare?",
+            options: [
+              "Surgical robots that help doctors perform precise operations",
+              "Hospital cafeteria menus",
+              "Patient waiting room chairs",
+            ],
+            answer: "Surgical robots that help doctors perform precise operations",
+          },
+          {
+            question: "Self-driving cars are an example of _____.",
+            options: [
+              "Robots that use sensors and AI to navigate roads",
+              "Regular cars with no technology",
+              "Toy cars for children",
+            ],
+            answer: "Robots that use sensors and AI to navigate roads",
+          },
+          {
+            question: "Drones are robots that _____.",
+            options: [
+              "Can fly and are used for delivery, photography, and rescue",
+              "Can only swim underwater",
+              "Are always the size of an airplane",
+            ],
+            answer: "Can fly and are used for delivery, photography, and rescue",
+          },
         ],
       },
       {
@@ -531,6 +819,42 @@ export const courses = [
             question: "Sensors are used to?",
             options: ["Collect Data", "Cook Food", "Paint Walls"],
             answer: "Collect Data",
+          },
+          {
+            question: "An ultrasonic sensor helps a robot _____.",
+            options: [
+              "Measure distance to objects using sound waves",
+              "See in color like human eyes",
+              "Taste food ingredients",
+            ],
+            answer: "Measure distance to objects using sound waves",
+          },
+          {
+            question: "A temperature sensor detects _____.",
+            options: [
+              "How hot or cold something is",
+              "How loud a sound is",
+              "What color an object is",
+            ],
+            answer: "How hot or cold something is",
+          },
+          {
+            question: "Which sensor helps a robot see?",
+            options: [
+              "Camera or image sensor",
+              "Pressure sensor",
+              "Humidity sensor",
+            ],
+            answer: "Camera or image sensor",
+          },
+          {
+            question: "An infrared (IR) sensor can help a robot _____.",
+            options: [
+              "Detect objects and follow lines on the ground",
+              "Connect to the internet",
+              "Play music",
+            ],
+            answer: "Detect objects and follow lines on the ground",
           },
         ],
       },
@@ -549,6 +873,42 @@ export const courses = [
             ],
             answer: "Line Follower Robot",
           },
+          {
+            question: "A line follower robot uses _____ to stay on track.",
+            options: [
+              "Infrared sensors that detect light and dark surfaces",
+              "GPS satellites",
+              "Voice commands from a person",
+            ],
+            answer: "Infrared sensors that detect light and dark surfaces",
+          },
+          {
+            question: "Arduino is a popular _____ used in beginner robot projects.",
+            options: [
+              "Microcontroller board",
+              "Type of battery",
+              "Programming language only",
+            ],
+            answer: "Microcontroller board",
+          },
+          {
+            question: "An obstacle-avoiding robot uses sensors to _____.",
+            options: [
+              "Detect objects in its path and change direction",
+              "Play music when it hits something",
+              "Speed up when it sees a wall",
+            ],
+            answer: "Detect objects in its path and change direction",
+          },
+          {
+            question: "What programming skill is useful for building robots?",
+            options: [
+              "Writing code to control sensors and motors (like C++ or Python)",
+              "Only drawing pictures",
+              "Typing speed",
+            ],
+            answer: "Writing code to control sensors and motors (like C++ or Python)",
+          },
         ],
       },
       {
@@ -562,6 +922,42 @@ export const courses = [
             options: ["Factories", "Homes", "Both"],
             answer: "Both",
           },
+          {
+            question: "Which robot helps explore other planets?",
+            options: [
+              "Mars Rover (like Curiosity and Perseverance)",
+              "A washing machine",
+              "A drone at a birthday party",
+            ],
+            answer: "Mars Rover (like Curiosity and Perseverance)",
+          },
+          {
+            question: "In agriculture, robots can help by _____.",
+            options: [
+              "Planting seeds, watering crops, and detecting weeds",
+              "Eating the vegetables",
+              "Selling food online only",
+            ],
+            answer: "Planting seeds, watering crops, and detecting weeds",
+          },
+          {
+            question: "Warehouse robots like those at Amazon are used to _____.",
+            options: [
+              "Sort, pick, and move packages efficiently",
+              "Deliver food to customers' homes",
+              "Build the warehouse building",
+            ],
+            answer: "Sort, pick, and move packages efficiently",
+          },
+          {
+            question: "Robots in education can _____.",
+            options: [
+              "Help students learn coding and problem-solving through hands-on projects",
+              "Replace all teachers completely",
+              "Only work in universities",
+            ],
+            answer: "Help students learn coding and problem-solving through hands-on projects",
+          },
         ],
       },
       {
@@ -574,6 +970,42 @@ export const courses = [
             question: "Robots can do which unusual task?",
             options: ["Play Chess", "Fly to Mars", "Both"],
             answer: "Both",
+          },
+          {
+            question: "Sophia is a famous robot known for _____.",
+            options: [
+              "Being the first robot to receive citizenship of a country",
+              "Winning the Olympics",
+              "Being the fastest robot ever built",
+            ],
+            answer: "Being the first robot to receive citizenship of a country",
+          },
+          {
+            question: "The smallest robots in the world are called _____.",
+            options: [
+              "Nanobots — tiny enough to travel inside the human body",
+              "Megabots — they are huge machines",
+              "Microwaves — they heat food",
+            ],
+            answer: "Nanobots — tiny enough to travel inside the human body",
+          },
+          {
+            question: "A robot named ASIMO, built by Honda, can _____.",
+            options: [
+              "Walk, run, climb stairs, and even dance",
+              "Only move in a straight line",
+              "Only talk but not move",
+            ],
+            answer: "Walk, run, climb stairs, and even dance",
+          },
+          {
+            question: "Robots have been sent to the bottom of the ocean to _____.",
+            options: [
+              "Explore shipwrecks and deep-sea creatures",
+              "Build houses underwater",
+              "Catch fish for restaurants",
+            ],
+            answer: "Explore shipwrecks and deep-sea creatures",
           },
         ],
       },

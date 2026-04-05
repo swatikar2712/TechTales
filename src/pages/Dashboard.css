@@ -1,12 +1,12 @@
 /* ═══════════════════════════════════════════
    Dashboard
-   Palette: #FFD700 · #FFF176 · #D4A017 · #6A0DAD · #8A2BE2
+   Palette: Lilac (#8E6FBF · #C4A8D8) & Butter Yellow (#FFE082 · #FFF8E1 · #E5B84C)
    ═══════════════════════════════════════════ */
 
 /* ===== Dashboard Layout ===== */
 .dashboard {
   padding: 30px 40px;
-  font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  font-family: var(--font-body);
   max-width: 960px;
   margin: 0 auto;
   text-align: left;
@@ -41,7 +41,7 @@
   background: var(--tt-bright-yellow);
   color: var(--tt-purple);
   font-weight: bold;
-  box-shadow: 0 4px 18px rgba(255, 215, 0, 0.45);
+  box-shadow: 0 4px 18px rgba(255, 224, 130, 0.45);
   animation: pulse-glow 2s ease-in-out infinite;
 }
 .level-badge .lvl-num {
@@ -55,8 +55,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 4px 18px rgba(255, 215, 0, 0.45); }
-  50% { box-shadow: 0 4px 28px rgba(138, 43, 226, 0.4); }
+  0%, 100% { box-shadow: 0 4px 18px rgba(255, 224, 130, 0.45); }
+  50% { box-shadow: 0 4px 28px rgba(196, 168, 216, 0.4); }
 }
 
 /* ===== Stat Cards Row ===== */
@@ -71,7 +71,7 @@
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 16px rgba(106, 13, 173, 0.05);
+  box-shadow: 0 4px 16px rgba(142, 111, 191, 0.05);
   border: 2px solid var(--tt-soft-yellow);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
 }
@@ -79,10 +79,10 @@
 .stat-card:nth-child(2) { border-color: var(--tt-violet); }
 .stat-card:nth-child(3) { border-color: var(--tt-mustard); }
 .stat-card:nth-child(4) { border-color: var(--tt-purple); }
-.stat-card:nth-child(1):hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(255, 215, 0, 0.2); border-color: var(--tt-mustard); }
-.stat-card:nth-child(2):hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(138, 43, 226, 0.2); border-color: var(--tt-purple); }
-.stat-card:nth-child(3):hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(212, 160, 23, 0.2); border-color: var(--tt-bright-yellow); }
-.stat-card:nth-child(4):hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(106, 13, 173, 0.2); border-color: var(--tt-violet); }
+.stat-card:nth-child(1):hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(255, 224, 130, 0.2); border-color: var(--tt-mustard); }
+.stat-card:nth-child(2):hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(196, 168, 216, 0.2); border-color: var(--tt-purple); }
+.stat-card:nth-child(3):hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(229, 184, 76, 0.2); border-color: var(--tt-bright-yellow); }
+.stat-card:nth-child(4):hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(142, 111, 191, 0.2); border-color: var(--tt-violet); }
 .stat-icon {
   font-size: 1.8rem;
   margin-bottom: 6px;
@@ -127,7 +127,7 @@
 
 /* ===== Progress Bar ===== */
 .progress-bar {
-  background: rgba(106, 13, 173, 0.1);
+  background: rgba(142, 111, 191, 0.1);
   border-radius: 10px;
   height: 16px;
   overflow: hidden;
@@ -190,7 +190,7 @@
   background: #fff;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 4px 16px rgba(106, 13, 173, 0.05);
+  box-shadow: 0 4px 16px rgba(142, 111, 191, 0.05);
   border: 2px solid var(--tt-soft-yellow);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
   cursor: default;
@@ -201,10 +201,10 @@
 .course-card:nth-child(4n+2) { border-color: var(--tt-violet); }
 .course-card:nth-child(4n+3) { border-color: var(--tt-mustard); }
 .course-card:nth-child(4n+4) { border-color: var(--tt-purple); }
-.course-card:nth-child(4n+1):hover { transform: translateY(-3px); box-shadow: 0 8px 26px rgba(255, 215, 0, 0.2); border-color: var(--tt-mustard); }
-.course-card:nth-child(4n+2):hover { transform: translateY(-3px); box-shadow: 0 8px 26px rgba(138, 43, 226, 0.2); border-color: var(--tt-purple); }
-.course-card:nth-child(4n+3):hover { transform: translateY(-3px); box-shadow: 0 8px 26px rgba(212, 160, 23, 0.18); border-color: var(--tt-bright-yellow); }
-.course-card:nth-child(4n+4):hover { transform: translateY(-3px); box-shadow: 0 8px 26px rgba(106, 13, 173, 0.18); border-color: var(--tt-violet); }
+.course-card:nth-child(4n+1):hover { transform: translateY(-3px); box-shadow: 0 8px 26px rgba(255, 224, 130, 0.2); border-color: var(--tt-mustard); }
+.course-card:nth-child(4n+2):hover { transform: translateY(-3px); box-shadow: 0 8px 26px rgba(196, 168, 216, 0.2); border-color: var(--tt-purple); }
+.course-card:nth-child(4n+3):hover { transform: translateY(-3px); box-shadow: 0 8px 26px rgba(229, 184, 76, 0.18); border-color: var(--tt-bright-yellow); }
+.course-card:nth-child(4n+4):hover { transform: translateY(-3px); box-shadow: 0 8px 26px rgba(142, 111, 191, 0.18); border-color: var(--tt-violet); }
 .course-card h4 {
   margin: 0 0 4px;
   font-size: 1rem;
@@ -265,7 +265,7 @@
 }
 .continue-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 3px 12px rgba(106, 13, 173, 0.35);
+  box-shadow: 0 3px 12px rgba(142, 111, 191, 0.35);
 }
 
 /* ===== Badges ===== */
@@ -283,7 +283,7 @@
   background: #fff;
   border-radius: 18px;
   border: 2px solid var(--tt-soft-yellow);
-  box-shadow: 0 4px 14px rgba(106, 13, 173, 0.05);
+  box-shadow: 0 4px 14px rgba(142, 111, 191, 0.05);
   transition: transform 0.2s ease, border-color 0.2s;
 }
 .badge-card:nth-child(4n+1) { border-color: var(--tt-bright-yellow); }
@@ -358,7 +358,7 @@
 }
 .streak-dot.active {
   background: var(--tt-bright-yellow);
-  box-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 0 6px rgba(255, 224, 130, 0.5);
 }
 
 /* ===== Actions ===== */

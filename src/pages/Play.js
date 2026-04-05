@@ -1,17 +1,13 @@
 import { useState } from "react";
-import RobotGame from "../games/RobotGame";
-import CircuitGame from "../games/CircuitGame";
-import WebBuilderGame from "../games/WebBuilderGame";
-import DataExplorerGame from "../games/DataExplorerGame";
-import SortingGame from "../games/SortingGame";
+import TrainModelGame from "../games/TrainModelGame";
+import PatternDetectiveGame from "../games/PatternDetectiveGame";
+import RobotCommanderGame from "../games/RobotCommanderGame";
 import "./Play.css";
 
 const GAMES = [
-  { key: "robot",   title: "Code the Robot",   icon: "\uD83E\uDD16", color: "#FFD700", desc: "Program a robot to move" },
-  { key: "circuit", title: "Circuit Builder",   icon: "\u26A1",       color: "#6A0DAD", desc: "Build working circuits" },
-  { key: "web",     title: "Web Builder",       icon: "\uD83C\uDF10", color: "#8A2BE2", desc: "Create web pages visually" },
-  { key: "data",    title: "Data Explorer",     icon: "\uD83D\uDEE1\uFE0F", color: "#D4A017", desc: "Explore and analyze data" },
-  { key: "sorting", title: "Sorting Puzzle",    icon: "\uD83E\uDDE9", color: "#FFF176", desc: "Solve sorting challenges" },
+  { key: "train",   title: "Train the Model",      icon: "\uD83E\uDDE0", color: "#C4A8D8", desc: "Label data to teach an AI classifier \u2014 see how training quality affects accuracy!" },
+  { key: "pattern", title: "AI Pattern Detective",  icon: "\uD83D\uDD0D", color: "#FFE082", desc: "Spot hidden patterns in sequences \u2014 the same skill AI uses to learn from data!" },
+  { key: "robot",   title: "Robot Commander",       icon: "\uD83E\uDD16", color: "#8E6FBF", desc: "Write a program of commands, then watch your robot execute the mission!" },
 ];
 
 function Play() {
@@ -19,11 +15,9 @@ function Play() {
 
   const renderGame = () => {
     switch (selectedGame) {
-      case "robot":   return <RobotGame />;
-      case "circuit": return <CircuitGame />;
-      case "web":     return <WebBuilderGame />;
-      case "data":    return <DataExplorerGame />;
-      case "sorting": return <SortingGame />;
+      case "train":   return <TrainModelGame />;
+      case "pattern": return <PatternDetectiveGame />;
+      case "robot":   return <RobotCommanderGame />;
       default:        return null;
     }
   };
