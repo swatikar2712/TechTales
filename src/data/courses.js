@@ -279,7 +279,7 @@ export const courses = [
       /* ===== Unit 1: Foundations of Machine Learning ===== */
       {
         id: 1,
-        title: "Unit 1 – Foundations of Machine Learning",
+        title: "Foundations of Machine Learning",
         video: "/videos/MLU1.mp4",
         videoHindi: "/videos/MLU1_hindi.mp4",
         description:
@@ -337,7 +337,7 @@ export const courses = [
       /* ===== Unit 2: Data Preparation & Exploratory Analysis ===== */
       {
         id: 2,
-        title: "Unit 2 – Data Preparation & Exploratory Analysis",
+        title: "Data Preparation & Exploratory Analysis",
         video: "/videos/MLU2.mp4",
         videoHindi: "/videos/MLU2_hindi.mp4",
         description:
@@ -403,7 +403,7 @@ export const courses = [
       /* ===== Unit 3: Supervised Learning – Regression, Classification & Evaluation ===== */
       {
         id: 3,
-        title: "Unit 3 – Supervised Learning: Regression, Classification & Evaluation",
+        title: "Supervised Learning: Regression, Classification & Evaluation",
         video: "/videos/MLU3.mp4",
         videoHindi: "/videos/MLU3_hindi.mp4",
         description:
@@ -488,7 +488,7 @@ export const courses = [
       /* ===== Unit 4: Unsupervised Learning, Ensembles & Deep Learning ===== */
       {
         id: 4,
-        title: "Unit 4 – Unsupervised Learning, Ensembles & Deep Learning",
+        title: "Unsupervised Learning, Ensembles & Deep Learning",
         video: "/videos/MLU4.mp4",
         videoHindi: "/videos/MLU4_hindi.mp4",
         description:
@@ -581,7 +581,7 @@ export const courses = [
       /* ===== Unit 5: ML in Practice – Deployment, Ethics & Real-World Applications ===== */
       {
         id: 5,
-        title: "Unit 5 – ML in Practice: Deployment, Ethics & Real-World Applications",
+        title: "ML in Practice: Deployment, Ethics & Real-World Applications",
         video: "/videos/MLU5.mp4",
         videoHindi: "/videos/MLU5_hindi.mp4",
         description:
