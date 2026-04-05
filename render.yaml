@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: techtales-api
+    env: node
+    buildCommand: npm install
+    startCommand: node Server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromSecret: database_url
+
+  - type: web
+    name: techtales-frontend
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: ./build
+    routes:
+      - type: redirect
+        source: /api/*
+        destination: https://techtales-api.onrender.com/api/*
+    envVars:
+      - key: NODE_ENV
+        value: production

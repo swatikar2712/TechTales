@@ -2,12 +2,14 @@ import { useState } from "react";
 import TrainModelGame from "../games/TrainModelGame";
 import PatternDetectiveGame from "../games/PatternDetectiveGame";
 import RobotCommanderGame from "../games/RobotCommanderGame";
+import WordChallengeGame from "../games/WordChallengeGame";
 import "./Play.css";
 
 const GAMES = [
   { key: "train",   title: "Train the Model",      icon: "\uD83E\uDDE0", color: "#C4A8D8", desc: "Label data to teach an AI classifier \u2014 see how training quality affects accuracy!" },
   { key: "pattern", title: "AI Pattern Detective",  icon: "\uD83D\uDD0D", color: "#FFE082", desc: "Spot hidden patterns in sequences \u2014 the same skill AI uses to learn from data!" },
   { key: "robot",   title: "Robot Commander",       icon: "\uD83E\uDD16", color: "#8E6FBF", desc: "Write a program of commands, then watch your robot execute the mission!" },
+  { key: "circuit", title: "AI Word Challenge",    icon: "🔤", color: "#56CCF2", desc: "Drag letters to form AI keywords you've learned in the course!" },
 ];
 
 function Play() {
@@ -18,6 +20,7 @@ function Play() {
       case "train":   return <TrainModelGame />;
       case "pattern": return <PatternDetectiveGame />;
       case "robot":   return <RobotCommanderGame />;
+      case "circuit": return <WordChallengeGame />;
       default:        return null;
     }
   };
