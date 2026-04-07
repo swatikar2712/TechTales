@@ -55,6 +55,17 @@ export const courses = [
             answer: "Data",
           },
         ],
+        miniGame: {
+          type: "match",
+          title: "🧩 Match the AI Terms!",
+          instruction: "Click a term, then click its meaning to make a match!",
+          pairs: [
+            { term: "AI", definition: "Machines that think like humans" },
+            { term: "Siri", definition: "A voice assistant by Apple" },
+            { term: "Data", definition: "Information AI learns from" },
+            { term: "Algorithm", definition: "Step-by-step instructions" },
+          ],
+        },
       },
       {
         id: 2,
@@ -110,6 +121,18 @@ export const courses = [
             answer: "It can generate creative outputs but doesn't truly understand them",
           },
         ],
+        miniGame: {
+          type: "trueFalse",
+          title: "⚡ True or False Blitz!",
+          instruction: "Are these facts about AI vs Humans true or false? Be quick!",
+          statements: [
+            { text: "AI can feel emotions just like humans.", answer: false },
+            { text: "AI can process millions of data points faster than humans.", answer: true },
+            { text: "Human brains use electricity and chemicals to think.", answer: true },
+            { text: "AI can truly understand sarcasm perfectly.", answer: false },
+            { text: "AI is powered by computers and algorithms.", answer: true },
+          ],
+        },
       },
       {
         id: 3,
@@ -160,6 +183,20 @@ export const courses = [
             answer: "No, it is still a goal for future research",
           },
         ],
+        miniGame: {
+          type: "sortBuckets",
+          title: "🗂️ Sort the AI Types!",
+          instruction: "Drag each example into the correct AI category!",
+          buckets: ["Narrow AI", "General AI", "Super AI"],
+          items: [
+            { text: "Spam email filter", bucket: "Narrow AI" },
+            { text: "Chess-playing program", bucket: "Narrow AI" },
+            { text: "A robot that learns any job like a human", bucket: "General AI" },
+            { text: "AI smarter than all humans combined", bucket: "Super AI" },
+            { text: "Voice assistant (Alexa)", bucket: "Narrow AI" },
+            { text: "AI that passes every human test", bucket: "General AI" },
+          ],
+        },
       },
       {
         id: 4,
@@ -214,6 +251,17 @@ export const courses = [
             answer: "Lots of good quality data to learn from",
           },
         ],
+        miniGame: {
+          type: "wordScramble",
+          title: "🔤 Unscramble AI Words!",
+          instruction: "Click the letters in the right order to spell the AI word!",
+          words: [
+            { scrambled: "ATDA", answer: "DATA", hint: "AI needs this to learn" },
+            { scrambled: "NACS", answer: "SCAN", hint: "AI can do this to medical images" },
+            { scrambled: "TLARANETS", answer: "TRANSLATE", hint: "AI can do this with languages" },
+            { scrambled: "IAMSPYEHT", answer: "EMPATHY", hint: "AI cannot feel this" },
+          ],
+        },
       },
       {
         id: 5,
@@ -268,6 +316,17 @@ export const courses = [
             answer: "The people and companies who built and deployed the AI",
           },
         ],
+        miniGame: {
+          type: "match",
+          title: "🧩 Match Ethics Terms!",
+          instruction: "Click a term, then click its meaning!",
+          pairs: [
+            { term: "Bias", definition: "Unfair decisions from bad data" },
+            { term: "Privacy", definition: "Protecting personal information" },
+            { term: "Transparency", definition: "Understanding how AI decides" },
+            { term: "Fairness", definition: "Treating everyone equally" },
+          ],
+        },
       },
     ],
   },
@@ -332,6 +391,17 @@ export const courses = [
             answer: "Features",
           },
         ],
+        miniGame: {
+          type: "match",
+          title: "🧩 Match ML Terms!",
+          instruction: "Click a term, then click its meaning!",
+          pairs: [
+            { term: "Features", definition: "Input properties of data" },
+            { term: "Labels", definition: "The answers the model predicts" },
+            { term: "Supervised", definition: "Learning with labeled data" },
+            { term: "Reinforcement", definition: "Learning from rewards & penalties" },
+          ],
+        },
       },
 
       /* ===== Unit 2: Data Preparation & Exploratory Analysis ===== */
@@ -398,6 +468,20 @@ export const courses = [
             answer: "Feature Selection",
           },
         ],
+        miniGame: {
+          type: "sortBuckets",
+          title: "🗂️ Sort the Data Steps!",
+          instruction: "Put each step in the correct stage of data preparation!",
+          buckets: ["Cleaning", "Encoding", "Scaling"],
+          items: [
+            { text: "Remove missing values", bucket: "Cleaning" },
+            { text: "Fix outliers", bucket: "Cleaning" },
+            { text: "One-Hot Encoding", bucket: "Encoding" },
+            { text: "Label Encoding", bucket: "Encoding" },
+            { text: "Min-Max Normalization", bucket: "Scaling" },
+            { text: "Z-score Standardization", bucket: "Scaling" },
+          ],
+        },
       },
 
       /* ===== Unit 3: Supervised Learning – Regression, Classification & Evaluation ===== */
@@ -483,6 +567,18 @@ export const courses = [
               "How mixed (impure) the classes are at a given node",
           },
         ],
+        miniGame: {
+          type: "trueFalse",
+          title: "⚡ Algorithm True or False!",
+          instruction: "Are these statements about ML algorithms true or false?",
+          statements: [
+            { text: "Linear Regression predicts categories.", answer: false },
+            { text: "KNN classifies based on nearest neighbors.", answer: true },
+            { text: "Decision Trees split data using questions.", answer: true },
+            { text: "F1-Score combines Precision and Recall.", answer: true },
+            { text: "Overfitting means the model is too simple.", answer: false },
+          ],
+        },
       },
 
       /* ===== Unit 4: Unsupervised Learning, Ensembles & Deep Learning ===== */
@@ -576,6 +672,17 @@ export const courses = [
               "How important a word is in a document relative to the entire corpus",
           },
         ],
+        miniGame: {
+          type: "wordScramble",
+          title: "🔤 Unscramble ML Words!",
+          instruction: "Click the letters in the right order to spell the ML word!",
+          words: [
+            { scrambled: "RTCUELS", answer: "CLUSTER", hint: "Groups of similar data" },
+            { scrambled: "RNUONE", answer: "NEURON", hint: "Building block of neural networks" },
+            { scrambled: "OLPDEE NAGLIREN", answer: "DEEP LEARNING", hint: "Neural networks with many layers" },
+            { scrambled: "BNOGSOTI", answer: "BOOSTING", hint: "Combining weak learners" },
+          ],
+        },
       },
 
       /* ===== Unit 5: ML in Practice – Deployment, Ethics & Real-World Applications ===== */
@@ -654,6 +761,17 @@ export const courses = [
               "Explaining and interpreting individual model predictions",
           },
         ],
+        miniGame: {
+          type: "match",
+          title: "🧩 Match ML Concepts!",
+          instruction: "Click a term, then click its meaning!",
+          pairs: [
+            { term: "MLOps", definition: "Automating the ML lifecycle" },
+            { term: "Data Drift", definition: "Data changes over time" },
+            { term: "SHAP", definition: "Explains model predictions" },
+            { term: "Bias", definition: "Unfair outcomes from models" },
+          ],
+        },
       },
     ],
   },
@@ -710,6 +828,17 @@ export const courses = [
             answer: "Forced labor or work",
           },
         ],
+        miniGame: {
+          type: "wordScramble",
+          title: "🔤 Unscramble Robot Words!",
+          instruction: "Click the letters in the right order to spell the word!",
+          words: [
+            { scrambled: "TOORB", answer: "ROBOT", hint: "A machine that can sense, think, and act" },
+            { scrambled: "SNSROE", answer: "SENSOR", hint: "Helps a robot detect things" },
+            { scrambled: "ROTAMAUOIN", answer: "AUTOMATION", hint: "Doing tasks without humans" },
+            { scrambled: "GROAPMR", answer: "PROGRAM", hint: "Instructions a robot follows" },
+          ],
+        },
       },
       {
         id: 2,
@@ -808,6 +937,20 @@ export const courses = [
             answer: "Can fly and are used for delivery, photography, and rescue",
           },
         ],
+        miniGame: {
+          type: "sortBuckets",
+          title: "🗂️ Where Do These Robots Work?",
+          instruction: "Sort each robot into where it's mainly used!",
+          buckets: ["Home", "Hospital", "Factory"],
+          items: [
+            { text: "Roomba vacuum", bucket: "Home" },
+            { text: "Surgical robot", bucket: "Hospital" },
+            { text: "Assembly line arm", bucket: "Factory" },
+            { text: "Smart thermostat", bucket: "Home" },
+            { text: "Medicine delivery bot", bucket: "Hospital" },
+            { text: "Welding robot", bucket: "Factory" },
+          ],
+        },
       },
       {
         id: 4,
@@ -857,6 +1000,17 @@ export const courses = [
             answer: "Detect objects and follow lines on the ground",
           },
         ],
+        miniGame: {
+          type: "match",
+          title: "🧩 Match Sensors!",
+          instruction: "Click a sensor, then click what it detects!",
+          pairs: [
+            { term: "Ultrasonic", definition: "Measures distance with sound" },
+            { term: "Camera", definition: "Sees images and video" },
+            { term: "Temperature", definition: "Detects hot or cold" },
+            { term: "Infrared (IR)", definition: "Follows lines & detects objects" },
+          ],
+        },
       },
       {
         id: 5,
@@ -910,6 +1064,18 @@ export const courses = [
             answer: "Writing code to control sensors and motors (like C++ or Python)",
           },
         ],
+        miniGame: {
+          type: "trueFalse",
+          title: "⚡ Robot Projects: True or False?",
+          instruction: "Are these statements about robot projects true or false?",
+          statements: [
+            { text: "A line follower robot uses infrared sensors.", answer: true },
+            { text: "Arduino is a type of battery.", answer: false },
+            { text: "Obstacle-avoiding robots detect things in their path.", answer: true },
+            { text: "You need to know coding to build robots.", answer: true },
+            { text: "Robots can only be programmed in English.", answer: false },
+          ],
+        },
       },
       {
         id: 6,
@@ -959,6 +1125,17 @@ export const courses = [
             answer: "Help students learn coding and problem-solving through hands-on projects",
           },
         ],
+        miniGame: {
+          type: "wordScramble",
+          title: "🔤 Unscramble Robot Words!",
+          instruction: "Click the letters to spell the word!",
+          words: [
+            { scrambled: "OREVR", answer: "ROVER", hint: "Explores planets like Mars" },
+            { scrambled: "NORDE", answer: "DRONE", hint: "A flying robot" },
+            { scrambled: "EGRACITLUUR", answer: "AGRICULTURE", hint: "Farming with robots" },
+            { scrambled: "WAREHOUES", answer: "WAREHOUSE", hint: "Where Amazon robots work" },
+          ],
+        },
       },
       {
         id: 7,
@@ -1008,6 +1185,18 @@ export const courses = [
             answer: "Explore shipwrecks and deep-sea creatures",
           },
         ],
+        miniGame: {
+          type: "trueFalse",
+          title: "⚡ Fun Robot Facts: True or False?",
+          instruction: "How well do you know your robot fun facts?",
+          statements: [
+            { text: "Sophia the robot got citizenship in Saudi Arabia.", answer: true },
+            { text: "Nanobots are as big as a car.", answer: false },
+            { text: "ASIMO can walk, run, and dance.", answer: true },
+            { text: "Robots have never been to the ocean floor.", answer: false },
+            { text: "Robots can play chess and beat humans.", answer: true },
+          ],
+        },
       },
     ],
   },

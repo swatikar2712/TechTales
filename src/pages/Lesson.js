@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { courses } from "../data/courses";
 import { useState, useEffect } from "react";
+import LessonMiniGame from "../components/LessonMiniGame";
 import "./Lesson.css";
 
 function Lesson() {
@@ -162,6 +163,11 @@ function Lesson() {
               </div>
             )}
           </div>
+        )}
+
+        {/* Mini-Game — shown after quiz is complete */}
+        {submitted && currentQuestion === questions.length - 1 && module.miniGame && (
+          <LessonMiniGame miniGame={module.miniGame} />
         )}
       </div>
     </div>
