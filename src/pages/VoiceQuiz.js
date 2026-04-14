@@ -95,7 +95,6 @@ function VoiceQuizLanding() {
 /* ── Active Quiz Session ── */
 function VoiceQuizSession() {
   const { world, topicId } = useParams();
-  const navigate = useNavigate();
   const lessonData = voiceQuizData[world]?.find((l) => l.lessonId === parseInt(topicId));
   const course = courses.find((c) => c.class === world);
   const moduleName = course?.modules.find((m) => m.id === parseInt(topicId))?.title;
@@ -105,7 +104,6 @@ function VoiceQuizSession() {
   const [transcript, setTranscript] = useState("");
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
-  const [spokenOnce, setSpokenOnce] = useState(false);
   const [browserSupport, setBrowserSupport] = useState(true);
   const recognitionRef = useRef(null);
 
@@ -133,10 +131,8 @@ function VoiceQuizSession() {
   /* Auto-speak each new question */
   useEffect(() => {
     if (current && !finished) {
-      setSpokenOnce(false);
       const timeout = setTimeout(() => {
         speakQuestion(current.question);
-        setSpokenOnce(true);
       }, 600);
       return () => {
         clearTimeout(timeout);
