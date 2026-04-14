@@ -10,7 +10,7 @@ const voiceQuizData = {
       questions: [
         { question: "What does AI stand for?", answers: ["artificial intelligence"] },
         { question: "Name one example of AI.", answers: ["siri", "alexa", "voice assistant", "chatgpt", "google assistant"] },
-        { question: "What does AI try to mimic?", answers: ["human intelligence", "human thinking", "human decision making"] },
+        { question: "What does AI try to mimic?", answers: ["human intelligence", "human thinking", "human decision making", "human mind", "human brain", "the human mind", "the human brain", "intelligence"] },
         { question: "Who is known as the father of Artificial Intelligence?", answers: ["john mccarthy"] },
         { question: "What does AI need to learn and make decisions?", answers: ["data"] },
       ],

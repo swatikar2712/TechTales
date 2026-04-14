@@ -304,48 +304,65 @@
 }
 .quick-access-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 740px;
   margin: 0 auto;
 }
 .quick-card {
-  background: #f7f6fb;
-  border: 2px solid #eee;
-  border-radius: 20px;
-  padding: 28px 20px;
+  background: #fff;
+  border: 2px solid var(--tt-soft-yellow, #FFE082);
+  border-radius: 24px;
+  padding: 32px 20px 28px;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s, border-color 0.3s;
 }
-.quick-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 28px rgba(91, 74, 158, 0.12);
-  border-color: var(--tt-purple-mid, #C4A8D8);
+.quick-card:nth-child(1) { border-color: var(--tt-bright-yellow, #FFD54F); }
+.quick-card:nth-child(2) { border-color: var(--tt-purple-mid, #C4A8D8); }
+.quick-card:nth-child(3) { border-color: var(--tt-mustard, #E5B84C); }
+.quick-card:nth-child(1):hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(255, 213, 79, 0.3);
+  border-color: var(--tt-mustard, #E5B84C);
 }
-.quick-card-accent {
-  background: linear-gradient(135deg, #f5f0fa 0%, #ede7f6 100%);
-  border-color: var(--tt-purple-mid, #C4A8D8);
-}
-.quick-card-accent:hover {
+.quick-card:nth-child(2):hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(108, 99, 255, 0.15);
   border-color: var(--tt-purple, #5B4A9E);
-  box-shadow: 0 8px 28px rgba(91, 74, 158, 0.2);
+}
+.quick-card:nth-child(3):hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(229, 184, 76, 0.25);
+  border-color: var(--tt-bright-yellow, #FFD54F);
 }
 .quick-icon {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  font-size: 1.8rem;
+  margin-bottom: 14px;
 }
+.quick-card:nth-child(1) .quick-icon { background: rgba(255, 213, 79, 0.15); }
+.quick-card:nth-child(2) .quick-icon { background: rgba(196, 168, 216, 0.18); }
+.quick-card:nth-child(3) .quick-icon { background: rgba(229, 184, 76, 0.15); }
 .quick-card h3 {
   font-size: 1.05rem;
   font-weight: 800;
   color: #1a1a2e;
-  margin: 0 0 4px;
+  margin: 0 0 6px;
 }
 .quick-card p {
   font-size: 0.84rem;
-  color: #666;
+  color: #555;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .quick-access-grid { grid-template-columns: 1fr; }
 }
 
 /* ── Stats / Trust Banner ── */

@@ -182,7 +182,7 @@ const Home = () => {
             <h3>Play</h3>
             <p>Learn through games</p>
           </div>
-          <div className="quick-card quick-card-accent" onClick={() => navigate("/voice-quiz")}>
+          <div className="quick-card" onClick={() => navigate("/voice-quiz")}>
             <span className="quick-icon">🎤</span>
             <h3>Test Your Knowledge</h3>
             <p>Answer questions with your voice!</p>

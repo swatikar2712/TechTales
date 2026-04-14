@@ -247,6 +247,19 @@
   color: #e74c3c;
   animation: vqBlink 1s ease-in-out infinite;
 }
+/* Evaluating spinner */
+.vq-evaluating-spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid #eee;
+  border-top-color: var(--tt-purple, #5B4A9E);
+  border-radius: 50%;
+  animation: vqSpin 0.8s linear infinite;
+  margin-bottom: 4px;
+}
+@keyframes vqSpin {
+  to { transform: rotate(360deg); }
+}
 @keyframes vqBlink {
   0%, 100% { opacity: 1; }
   50%      { opacity: 0.4; }

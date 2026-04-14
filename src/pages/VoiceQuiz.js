@@ -1,8 +1,13 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useState, useEffect, useRef, useCallback } from "react";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { courses } from "../data/courses";
 import voiceQuizData from "../data/voiceQuizData";
 import "./VoiceQuiz.css";
+
+/* ── Gemini setup for semantic answer checking ── */
+const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
+const geminiModel = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 /* ── Microphone SVG Icon ── */
 const MicIcon = ({ active }) => (
@@ -23,7 +28,7 @@ const SpeakerIcon = () => (
   </svg>
 );
 
-/* ── Fuzzy answer matching ── */
+/* ── Fuzzy local matching (fast fallback) ── */
 function normalizeText(text) {
   return text
     .toLowerCase()
@@ -32,13 +37,91 @@ function normalizeText(text) {
     .trim();
 }
 
-function checkAnswer(spoken, acceptedAnswers) {
+/* Word-level synonyms for common tech terms kids might say */
+const SYNONYMS = {
+  intelligence: ["mind", "thinking", "thought", "brain", "brains", "intellect", "smarts"],
+  mind: ["intelligence", "thinking", "brain", "intellect"],
+  brain: ["mind", "intelligence", "thinking"],
+  automation: ["automating", "automate", "automatic"],
+  data: ["information", "info"],
+  sensor: ["sensors", "detector", "detectors"],
+  robot: ["robots", "bot", "bots"],
+  program: ["programming", "code", "coding"],
+  artificial: ["ai"],
+};
+
+function getWordVariants(word) {
+  const variants = new Set([word]);
+  if (SYNONYMS[word]) SYNONYMS[word].forEach((s) => variants.add(s));
+  // Also check if this word is listed as a synonym of another word
+  for (const [key, syns] of Object.entries(SYNONYMS)) {
+    if (syns.includes(word)) variants.add(key);
+  }
+  return variants;
+}
+
+function checkAnswerLocal(spoken, acceptedAnswers) {
   const norm = normalizeText(spoken);
   if (!norm) return false;
-  return acceptedAnswers.some((ans) => {
+
+  // 1. Direct substring match (existing logic)
+  const directMatch = acceptedAnswers.some((ans) => {
     const normAns = normalizeText(ans);
     return norm.includes(normAns) || normAns.includes(norm);
   });
+  if (directMatch) return true;
+
+  // 2. Word-level matching with synonyms
+  const spokenWords = norm.split(" ");
+  return acceptedAnswers.some((ans) => {
+    const ansWords = normalizeText(ans).split(" ");
+    // Count how many answer words are matched (directly or via synonym)
+    let matched = 0;
+    for (const aw of ansWords) {
+      const variants = getWordVariants(aw);
+      if (spokenWords.some((sw) => variants.has(sw) || getWordVariants(sw).has(aw))) {
+        matched++;
+      }
+    }
+    // Accept if most key words match (>= 50% for single words, >= 60% for multi-word)
+    const threshold = ansWords.length === 1 ? 1 : Math.ceil(ansWords.length * 0.6);
+    return matched >= threshold;
+  });
+}
+
+/* ── Semantic check via Gemini ── */
+async function checkAnswerSemantic(question, spoken, acceptedAnswers) {
+  // Quick local check first — skip API call if obviously correct
+  if (checkAnswerLocal(spoken, acceptedAnswers)) return true;
+
+  // Only call Gemini if API key is available
+  if (!process.env.REACT_APP_GEMINI_API_KEY) {
+    return false;
+  }
+
+  try {
+    const prompt = `You are a quiz answer evaluator for a kids' tech education app. A student was asked a question and gave a spoken answer. Determine if their answer is correct or essentially correct (same meaning, even if worded differently).
+
+Question: "${question}"
+Expected answer(s): ${acceptedAnswers.map(a => `"${a}"`).join(", ")}
+Student's spoken answer: "${spoken}"
+
+Rules:
+- Accept synonyms, paraphrases, and partial answers that demonstrate understanding
+- Accept informal or simplified versions of the correct answer
+- Be generous with kids — if the core idea is right, accept it
+- Only reject answers that are clearly wrong or unrelated
+
+Respond with ONLY one word: CORRECT or WRONG`;
+
+    const result = await geminiModel.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text().trim().toUpperCase();
+    return text.includes("CORRECT");
+  } catch (err) {
+    console.error("Gemini semantic check failed:", err);
+    return false;
+  }
 }
 
 /* ── Landing Page (no params) ── */
@@ -100,7 +183,7 @@ function VoiceQuizSession() {
   const moduleName = course?.modules.find((m) => m.id === parseInt(topicId))?.title;
 
   const [qIndex, setQIndex] = useState(0);
-  const [status, setStatus] = useState("idle"); // idle | listening | correct | wrong
+  const [status, setStatus] = useState("idle"); // idle | listening | evaluating | correct | wrong
   const [transcript, setTranscript] = useState("");
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
@@ -165,19 +248,14 @@ function VoiceQuizSession() {
     recognition.maxAlternatives = 3;
     recognitionRef.current = recognition;
 
-    recognition.onresult = (event) => {
-      let matched = false;
-      for (let i = 0; i < event.results[0].length; i++) {
-        const spoken = event.results[0][i].transcript;
-        if (checkAnswer(spoken, current.answers)) {
-          setTranscript(spoken);
-          matched = true;
-          break;
-        }
-        if (i === 0) setTranscript(spoken); // show first result as transcript
-      }
+    recognition.onresult = async (event) => {
+      const spoken = event.results[0][0].transcript;
+      setTranscript(spoken);
+      setStatus("evaluating");
 
-      if (matched) {
+      const isCorrect = await checkAnswerSemantic(current.question, spoken, current.answers);
+
+      if (isCorrect) {
         setStatus("correct");
         setScore((s) => s + 1);
         speakQuestion("Correct!");
@@ -292,6 +370,11 @@ function VoiceQuizSession() {
               <div className="vq-mic-pulse" />
               <MicIcon active />
               <div className="vq-listening-text">Listening...</div>
+            </div>
+          ) : status === "evaluating" ? (
+            <div className="vq-mic-active">
+              <div className="vq-evaluating-spinner" />
+              <div className="vq-listening-text">Checking your answer...</div>
             </div>
           ) : (
             <button
