@@ -14,6 +14,7 @@ import Courses from "./pages/Courses";
 import Topics from "./pages/Topics";
 import Lesson from "./pages/Lesson";
 import Play from "./pages/Play";
+import VoiceQuiz from "./pages/VoiceQuiz";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -91,6 +92,9 @@ function Navbar() {
         <NavLink to="/play" className={({ isActive }) => `tt-nav-link ${isActive ? "active" : ""}`}>
           {"\uD83C\uDFAE"} Play
         </NavLink>
+        <NavLink to="/voice-quiz" className={({ isActive }) => `tt-nav-link ${isActive ? "active" : ""}`}>
+          {"\uD83C\uDF99\uFE0F"} Voice Quiz
+        </NavLink>
 
         {loggedIn ? (
           <button className="tt-nav-auth logout" onClick={handleLogout}>
@@ -122,6 +126,8 @@ function AnimatedRoutes() {
         <Route path="/courses/:world" element={<ProtectedRoute><Topics /></ProtectedRoute>} />
         <Route path="/lesson/:world/:topicId" element={<ProtectedRoute><Lesson /></ProtectedRoute>} />
         <Route path="/play" element={<ProtectedRoute><Play /></ProtectedRoute>} />
+        <Route path="/voice-quiz" element={<ProtectedRoute><VoiceQuiz /></ProtectedRoute>} />
+        <Route path="/voice-quiz/:world/:topicId" element={<ProtectedRoute><VoiceQuiz /></ProtectedRoute>} />
       </Routes>
     </main>
   );

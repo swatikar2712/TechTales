@@ -168,6 +168,28 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Quick Access */}
+      <section className="quick-access-section reveal">
+        <h2>Jump Right In</h2>
+        <div className="quick-access-grid">
+          <div className="quick-card" onClick={() => navigate("/dashboard")}>
+            <span className="quick-icon">📊</span>
+            <h3>Dashboard</h3>
+            <p>Track your progress</p>
+          </div>
+          <div className="quick-card" onClick={() => navigate("/play")}>
+            <span className="quick-icon">🎮</span>
+            <h3>Play</h3>
+            <p>Learn through games</p>
+          </div>
+          <div className="quick-card quick-card-accent" onClick={() => navigate("/voice-quiz")}>
+            <span className="quick-icon">🎤</span>
+            <h3>Test Your Knowledge</h3>
+            <p>Answer questions with your voice!</p>
+          </div>
+        </div>
+      </section>
+
       {/* Stats */}
       <section className="stats-section reveal">
         <h2>Learning by the Numbers</h2>

@@ -276,6 +276,29 @@
   margin-top: 14px;
 }
 
+/* Voice Quiz button after lesson */
+.lesson-voice-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 14px 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--tt-purple, #5B4A9E) 0%, var(--tt-purple-mid, #C4A8D8) 100%);
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(91, 74, 158, 0.25);
+}
+.lesson-voice-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(91, 74, 158, 0.35);
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .lesson-layout {

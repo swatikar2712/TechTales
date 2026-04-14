@@ -169,6 +169,13 @@ function Lesson() {
         {submitted && currentQuestion === questions.length - 1 && module.miniGame && (
           <LessonMiniGame miniGame={module.miniGame} />
         )}
+
+        {/* Voice Quiz link — shown after quiz is complete */}
+        {submitted && currentQuestion === questions.length - 1 && (
+          <Link to={`/voice-quiz/${world}/${topicId}`} className="tt-btn tt-btn-voice-quiz lesson-voice-btn">
+            🎤 Test Your Knowledge with Voice
+          </Link>
+        )}
       </div>
     </div>
   );

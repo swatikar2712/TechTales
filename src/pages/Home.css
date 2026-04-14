@@ -291,6 +291,63 @@
   transform: translateY(0);
 }
 
+/* ── Quick Access ── */
+.quick-access-section {
+  padding: 56px 24px;
+  background: #fff;
+}
+.quick-access-section h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 28px;
+}
+.quick-access-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+.quick-card {
+  background: #f7f6fb;
+  border: 2px solid #eee;
+  border-radius: 20px;
+  padding: 28px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s, border-color 0.3s;
+}
+.quick-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(91, 74, 158, 0.12);
+  border-color: var(--tt-purple-mid, #C4A8D8);
+}
+.quick-card-accent {
+  background: linear-gradient(135deg, #f5f0fa 0%, #ede7f6 100%);
+  border-color: var(--tt-purple-mid, #C4A8D8);
+}
+.quick-card-accent:hover {
+  border-color: var(--tt-purple, #5B4A9E);
+  box-shadow: 0 8px 28px rgba(91, 74, 158, 0.2);
+}
+.quick-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+.quick-card h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 4px;
+}
+.quick-card p {
+  font-size: 0.84rem;
+  color: #666;
+  margin: 0;
+}
+
 /* ── Stats / Trust Banner ── */
 .stats-section {
   padding: 48px 24px;
