@@ -63,7 +63,7 @@ const voiceQuizData = {
   ml: [
     {
       lessonId: 1,
-      lessonTitle: "Foundations of Machine Learning",
+      lessonTitle: "Introduction to Machine Learning",
       questions: [
         { question: "What does ML stand for?", answers: ["machine learning"] },
         { question: "Which type of ML uses labeled data?", answers: ["supervised learning", "supervised"] },
@@ -74,7 +74,7 @@ const voiceQuizData = {
     },
     {
       lessonId: 2,
-      lessonTitle: "Data Preparation & Exploratory Analysis",
+      lessonTitle: "How Computers Learn from Data",
       questions: [
         { question: "What does One-Hot Encoding do?", answers: ["converts categorical variables into binary columns", "converts categories to numbers", "binary columns"] },
         { question: "What does Normalization scale data to?", answers: ["zero to one", "0 to 1"] },
@@ -85,7 +85,7 @@ const voiceQuizData = {
     },
     {
       lessonId: 3,
-      lessonTitle: "Supervised Learning: Regression, Classification & Evaluation",
+      lessonTitle: "Types of Machine Learning",
       questions: [
         { question: "What does Linear Regression predict?", answers: ["a continuous value", "continuous numerical value", "numbers", "continuous"] },
         { question: "What is the purpose of Regularization?", answers: ["prevent overfitting", "penalizing large coefficients", "reduce overfitting"] },
@@ -96,7 +96,7 @@ const voiceQuizData = {
     },
     {
       lessonId: 4,
-      lessonTitle: "Unsupervised Learning, Ensembles & Deep Learning",
+      lessonTitle: "Everyday Uses of Machine Learning",
       questions: [
         { question: "What does PCA stand for?", answers: ["principal component analysis"] },
         { question: "What is the key idea behind Random Forest?", answers: ["combining decision trees", "many decision trees", "bagging"] },
@@ -107,7 +107,7 @@ const voiceQuizData = {
     },
     {
       lessonId: 5,
-      lessonTitle: "ML in Practice: Deployment, Ethics & Real-World Applications",
+      lessonTitle: "Future of AI and Smart Technology",
       questions: [
         { question: "What is the purpose of MLOps?", answers: ["automate ml lifecycle", "streamline ml", "automate machine learning"] },
         { question: "What is Data Drift?", answers: ["data properties change over time", "data changes", "statistical properties change"] },
@@ -173,17 +173,17 @@ const voiceQuizData = {
         { question: "Name a programming language used for building robots.", answers: ["python", "c++", "c", "javascript"] },
       ],
     },
-    {
-      lessonId: 6,
-      lessonTitle: "Robots Around Us",
-      questions: [
-        { question: "Where can robots be found?", answers: ["factories", "homes", "both", "everywhere"] },
-        { question: "Which robot explores other planets?", answers: ["mars rover", "curiosity", "perseverance"] },
-        { question: "Can robots be found in both factories and homes?", answers: ["yes"] },
-        { question: "Name a space robot.", answers: ["mars rover", "curiosity", "perseverance", "robonaut"] },
-        { question: "What kind of robot helps in manufacturing?", answers: ["industrial robot", "assembly robot", "factory robot", "robotic arm"] },
-      ],
-    },
+    // {
+    //   lessonId: 6,
+    //   lessonTitle: "Robots Around Us",
+    //   questions: [
+    //     { question: "Where can robots be found?", answers: ["factories", "homes", "both", "everywhere"] },
+    //     { question: "Which robot explores other planets?", answers: ["mars rover", "curiosity", "perseverance"] },
+    //     { question: "Can robots be found in both factories and homes?", answers: ["yes"] },
+    //     { question: "Name a space robot.", answers: ["mars rover", "curiosity", "perseverance", "robonaut"] },
+    //     { question: "What kind of robot helps in manufacturing?", answers: ["industrial robot", "assembly robot", "factory robot", "robotic arm"] },
+    //   ],
+    // },
   ],
 };
 

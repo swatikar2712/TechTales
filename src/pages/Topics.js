@@ -18,11 +18,11 @@ function Topics() {
       { id: 3, title: "AI in daily life" },
     ],
     ml: [
-      { id: 1, title: "Foundations of Machine Learning" },
-      { id: 2, title: "Data Preparation & Exploratory Analysis" },
-      { id: 3, title: "Supervised Learning: Regression, Classification & Evaluation" },
-      { id: 4, title: "Unsupervised Learning, Ensembles & Deep Learning" },
-      { id: 5, title: "ML in Practice: Deployment, Ethics & Real-World Applications" },
+      { id: 1, title: "Introduction to Machine Learning" },
+      { id: 2, title: "How Computers Learn from Data" },
+      { id: 3, title: "Types of Machine Learning" },
+      { id: 4, title: "Everyday Uses of Machine Learning" },
+      { id: 5, title: "Future of AI and Smart Technology" },
     ],
     robotics: [
       { id: 1, title: "What is a Robot?" },

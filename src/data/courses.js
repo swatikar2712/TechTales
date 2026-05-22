@@ -70,8 +70,8 @@ export const courses = [
       {
         id: 2,
         title: "AI VS Human Intelligence?",
-        video: "/videos/Unit2.mp4",
-        videoHindi: "/videos/Unit2_hindi.mp4",
+        video: "/videos/Vallika_English.mp4",
+        videoHindi: "/videos/Vallika_Hindi.mp4",
         quiz: [
           {
             question:
@@ -338,7 +338,7 @@ export const courses = [
       /* ===== Unit 1: Foundations of Machine Learning ===== */
       {
         id: 1,
-        title: "Foundations of Machine Learning",
+        title: "Introduction to Machine Learning",
         video: "/videos/MLU1.mp4",
         videoHindi: "/videos/MLU1_hindi.mp4",
         description:
@@ -407,9 +407,9 @@ export const courses = [
       /* ===== Unit 2: Data Preparation & Exploratory Analysis ===== */
       {
         id: 2,
-        title: "Data Preparation & Exploratory Analysis",
-        video: "/videos/MLU2.mp4",
-        videoHindi: "/videos/MLU2_hindi.mp4",
+        title: "How Computers Learn from Data",
+        video: "/videos/ML_U2_ENG.mp4",
+        videoHindi: "/videos/ML_U2_HIN.mp4",
         description:
           "Data collection, cleaning, preprocessing, feature engineering, and exploratory data analysis.",
         topics: [
@@ -487,7 +487,7 @@ export const courses = [
       /* ===== Unit 3: Supervised Learning – Regression, Classification & Evaluation ===== */
       {
         id: 3,
-        title: "Supervised Learning: Regression, Classification & Evaluation",
+        title: "Types of Machine Learning",
         video: "/videos/MLU3.mp4",
         videoHindi: "/videos/MLU3_hindi.mp4",
         description:
@@ -584,7 +584,7 @@ export const courses = [
       /* ===== Unit 4: Unsupervised Learning, Ensembles & Deep Learning ===== */
       {
         id: 4,
-        title: "Unsupervised Learning, Ensembles & Deep Learning",
+        title: "Everyday Uses of Machine Learning",
         video: "/videos/MLU4.mp4",
         videoHindi: "/videos/MLU4_hindi.mp4",
         description:
@@ -688,7 +688,7 @@ export const courses = [
       /* ===== Unit 5: ML in Practice – Deployment, Ethics & Real-World Applications ===== */
       {
         id: 5,
-        title: "ML in Practice: Deployment, Ethics & Real-World Applications",
+        title: "Future of AI and Smart Technology",
         video: "/videos/MLU5.mp4",
         videoHindi: "/videos/MLU5_hindi.mp4",
         description:
@@ -843,8 +843,8 @@ export const courses = [
       {
         id: 2,
         title: "Robot Parts",
-        video: "/videos/Robotics2.mp4",
-        videoHindi: "/videos/Robotics2_hindi.mp4",
+        video: "/videos/Sheen_English.mp4",
+        videoHindi: "/videos/Sheen_Hindi.mp4",
         quiz: [
           {
             question: "Which part senses the environment?",
@@ -1077,127 +1077,7 @@ export const courses = [
           ],
         },
       },
-      {
-        id: 6,
-        title: "Robots Around Us",
-        video: "/videos/Robotics6.mp4",
-        videoHindi: "/videos/Robotics6_hindi.mp4",
-        quiz: [
-          {
-            question: "Robots can be found in?",
-            options: ["Factories", "Homes", "Both"],
-            answer: "Both",
-          },
-          {
-            question: "Which robot helps explore other planets?",
-            options: [
-              "Mars Rover (like Curiosity and Perseverance)",
-              "A washing machine",
-              "A drone at a birthday party",
-            ],
-            answer: "Mars Rover (like Curiosity and Perseverance)",
-          },
-          {
-            question: "In agriculture, robots can help by _____.",
-            options: [
-              "Planting seeds, watering crops, and detecting weeds",
-              "Eating the vegetables",
-              "Selling food online only",
-            ],
-            answer: "Planting seeds, watering crops, and detecting weeds",
-          },
-          {
-            question: "Warehouse robots like those at Amazon are used to _____.",
-            options: [
-              "Sort, pick, and move packages efficiently",
-              "Deliver food to customers' homes",
-              "Build the warehouse building",
-            ],
-            answer: "Sort, pick, and move packages efficiently",
-          },
-          {
-            question: "Robots in education can _____.",
-            options: [
-              "Help students learn coding and problem-solving through hands-on projects",
-              "Replace all teachers completely",
-              "Only work in universities",
-            ],
-            answer: "Help students learn coding and problem-solving through hands-on projects",
-          },
-        ],
-        miniGame: {
-          type: "wordScramble",
-          title: "🔤 Unscramble Robot Words!",
-          instruction: "Click the letters to spell the word!",
-          words: [
-            { scrambled: "OREVR", answer: "ROVER", hint: "Explores planets like Mars" },
-            { scrambled: "NORDE", answer: "DRONE", hint: "A flying robot" },
-            { scrambled: "EGRACITLUUR", answer: "AGRICULTURE", hint: "Farming with robots" },
-            { scrambled: "WAREHOUES", answer: "WAREHOUSE", hint: "Where Amazon robots work" },
-          ],
-        },
-      },
-      {
-        id: 7,
-        title: "Fun Facts About Robots",
-        video: "/videos/Robotics7.mp4",
-        videoHindi: "/videos/Robotics7_hindi.mp4",
-        quiz: [
-          {
-            question: "Robots can do which unusual task?",
-            options: ["Play Chess", "Fly to Mars", "Both"],
-            answer: "Both",
-          },
-          {
-            question: "Sophia is a famous robot known for _____.",
-            options: [
-              "Being the first robot to receive citizenship of a country",
-              "Winning the Olympics",
-              "Being the fastest robot ever built",
-            ],
-            answer: "Being the first robot to receive citizenship of a country",
-          },
-          {
-            question: "The smallest robots in the world are called _____.",
-            options: [
-              "Nanobots — tiny enough to travel inside the human body",
-              "Megabots — they are huge machines",
-              "Microwaves — they heat food",
-            ],
-            answer: "Nanobots — tiny enough to travel inside the human body",
-          },
-          {
-            question: "A robot named ASIMO, built by Honda, can _____.",
-            options: [
-              "Walk, run, climb stairs, and even dance",
-              "Only move in a straight line",
-              "Only talk but not move",
-            ],
-            answer: "Walk, run, climb stairs, and even dance",
-          },
-          {
-            question: "Robots have been sent to the bottom of the ocean to _____.",
-            options: [
-              "Explore shipwrecks and deep-sea creatures",
-              "Build houses underwater",
-              "Catch fish for restaurants",
-            ],
-            answer: "Explore shipwrecks and deep-sea creatures",
-          },
-        ],
-        miniGame: {
-          type: "trueFalse",
-          title: "⚡ Fun Robot Facts: True or False?",
-          instruction: "How well do you know your robot fun facts?",
-          statements: [
-            { text: "Sophia the robot got citizenship in Saudi Arabia.", answer: true },
-            { text: "Nanobots are as big as a car.", answer: false },
-            { text: "ASIMO can walk, run, and dance.", answer: true },
-            { text: "Robots have never been to the ocean floor.", answer: false },
-            { text: "Robots can play chess and beat humans.", answer: true },
-          ],
-        },
-      },
+
     ],
   },
 ];
